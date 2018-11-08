@@ -138,11 +138,6 @@ h2::first-letter {
     position: fixed;
 }
 
-/* Media Queries
-*
-* Note: Please don't base your responsive design off of this code. It is just here for demo purposes.
-* Rather, grab yourself a copy of Ethan's book: http://www.abookapart.com/products/responsive-web-design
-================================================== */
 /* Mobile and iPad Portrait */
 @media only screen and (max-width: 959px) {
     #main-navbar {
@@ -173,6 +168,10 @@ h2::first-letter {
         text-transform: uppercase;
         align-self: flex-start;
     }
+
+    .text-header {
+        font-size: 40px;
+    }
 }
 
 /* Mobile Landscape and Portrait */
@@ -184,6 +183,31 @@ h2::first-letter {
     #responsive-navbar {
         display: flex;
     }
+
+    .flex-container-nav {
+        align-items: center;
+        justify-content: space-between;
+        background: rgba(0, 0, 0, 0.700);
+        padding-left: 10px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        padding-right: 10px;
+    }
+
+    .flex-item {
+        width: auto;
+        color: white;
+        font-family: "RalewayRegular";
+        font-size: 25px;
+        margin-right: 40px;
+        margin-left: 40px;
+        text-transform: uppercase;
+        align-self: flex-start;
+    }
+
+    .text-header {
+        font-size: 40px;
+    }
 }
 
 /* Mobile Portrait */
@@ -194,6 +218,31 @@ h2::first-letter {
 
     #responsive-navbar {
         display: flex;
+    }
+
+    .flex-container-nav {
+        align-items: center;
+        justify-content: space-between;
+        background: rgba(0, 0, 0, 0.700);
+        padding-left: 10px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        padding-right: 10px;
+    }
+
+    .flex-item {
+        width: auto;
+        color: white;
+        font-family: "RalewayRegular";
+        font-size: 25px;
+        margin-right: 40px;
+        margin-left: 40px;
+        text-transform: uppercase;
+        align-self: flex-start;
+    }
+
+    .text-header {
+        font-size: 40px;
     }
 }
 
@@ -210,7 +259,7 @@ h2::first-letter {
 }
 
 .text-header {
-    font-size: 9.5vh;
+    font-size: 70px;
     font-family: "RalewayRegular";
     text-transform: uppercase;
     color: white;
@@ -244,6 +293,27 @@ h2::first-letter {
     justify-content: space-around;
 }
 
+/* Mobile and iPad Portrait */
+@media only screen and (max-width: 959px) {
+    .text-header {
+        font-size: 40px;
+    }
+}
+
+/* Mobile Landscape and Portrait */
+@media only screen and (max-width: 767px) {
+    .text-header {
+        font-size: 40px;
+    }
+}
+
+/* Mobile Portrait */
+@media only screen and (max-width: 479px) {
+    .text-header {
+        font-size: 40px;
+    }
+}
+
 /*------------NOSOTROS-------------*/
 .flex-container-nosotros {
     display: -webkit-box;
@@ -262,7 +332,6 @@ h2::first-letter {
     background-repeat: no-repeat;
     background-size: cover;
     background-image: linear-gradient(to bottom right, rgba(231, 76, 60, 1.0), rgba(231, 76, 60, 0.8)), url("../assets/img/work.jpg");
-    /*background-color: #d33a2c;*/
 }
 
 .flex-container-nosotros-arriba, .flex-container-nosotros-abajo {
@@ -668,7 +737,7 @@ input[type=text]:focus, input[type=email]:focus, textarea:focus {
 }
 
 input[type=submit] {
-    width: 50vh;
+    width: 90%;
     padding: 14px 20px;
     margin: 8px 0;
     border: none;
