@@ -509,6 +509,27 @@ ion-icon {
     text-align: center;
 }
 
+/* Mobile and iPad Portrait */
+@media only screen and (max-width: 959px) {
+    .oferta-h2 {
+        font-size: 40px;
+    }
+}
+
+/* Mobile Landscape and Portrait */
+@media only screen and (max-width: 767px) {
+    .oferta-h2 {
+        font-size: 40px;
+    }
+}
+
+/* Mobile Portrait */
+@media only screen and (max-width: 479px) {
+    .oferta-h2 {
+        font-size: 40px;
+    }
+}
+
 /*------------COUNTER-------------*/
 #stats {
     background-position: center;
@@ -616,7 +637,6 @@ ion-icon {
     min-height: 80vh;
     height: auto;
     width: 40vw;
-    min-width: 350px;
     margin-top: 10px;
     margin-bottom: 10px;
     justify-content: center;
@@ -630,6 +650,27 @@ ion-icon {
 
 .flex-box-contacto {
     align-items: center;
+}
+
+/* Mobile and iPad Portrait */
+@media only screen and (max-width: 959px) {
+    .flex-box-contacto, .flex-box-contacto-b {
+        width: 100vw;
+    }
+}
+
+/* Mobile Landscape and Portrait */
+@media only screen and (max-width: 767px) {
+    .flex-box-contacto, .flex-box-contacto-b {
+        width: 100vw;
+    }
+}
+
+/* Mobile Portrait */
+@media only screen and (max-width: 479px) {
+    .flex-box-contacto, .flex-box-contacto-b {
+        width: 100vw;
+    }
 }
 
 .identation-text {
