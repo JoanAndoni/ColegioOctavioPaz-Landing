@@ -1,11 +1,9 @@
 function myFunction() {
-    if (document.getElementById("responsiveNavbar").style.display === "flex") {
-        document.getElementById("responsiveNavbar").style.display = "none";
+    if (document.getElementById("responsiveNavbar").style.transform === "translateX(0%)") {
+        document.getElementById("responsiveNavbar").style.transform = "translateX(-100%)";
         document.getElementById("responsiveBar").style.display = "flex";
-        document.getElementById("menu-bottom").style.marginLeft = "0px";
     } else {
-        document.getElementById("responsiveNavbar").style.display = "flex";
-        document.getElementById("menu-bottom").style.marginLeft = "40px";
+        document.getElementById("responsiveNavbar").style.transform = "translateX(0%)";
         document.getElementById("responsiveBar").style.display = "none";
     }
 }
@@ -60,6 +58,14 @@ $('a[href*="#"]')
             }
         }
     });
+
+window.dataLayer = window.dataLayer || [];
+
+function gtag() {
+    dataLayer.push(arguments);
+}
+gtag('js', new Date());
+gtag('config', 'UA-114667324-1');
 
 function initMap() {
     var myLatLng = {

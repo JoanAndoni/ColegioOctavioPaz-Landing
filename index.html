@@ -1,563 +1,557 @@
 <!DOCTYPE html>
 <html lang="es-MX">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="La mejor escuela en Chimalhuacán con educación integral para tus hijos">
-    <meta name="author" content="Joan Andoni González Rioz">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="La mejor escuela en Chimalhuacán con educación integral para tus hijos">
+        <meta name="author" content="Joan Andoni González Rioz">
 
-    <title>Colegio Hispano Americano Octavio Paz</title>
+        <title>Colegio Hispano Americano Octavio Paz</title>
 
-    <!--NORMALIZATION-->
-    <link rel="shortcut icon" type="image/png" href="favicon.ico" />
-    <link rel="stylesheet" type="text/css" href="css/SuperResete.css">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+        <!--NORMALIZATION-->
+        <link rel="shortcut icon" type="image/png" href="favicon.ico" />
+        <link rel="stylesheet" type="text/css" href="css/SuperResete.css">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
 
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-114667324-1"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-          gtag('config', 'UA-114667324-1');
-    </script>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-114667324-1"></script>
 
-    <!--COUNTER-->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <!--IMPORT OF THE JQUERY-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    </head>
 
-</head>
+    <body>
 
-<body>
+        <!-- NAVBAR -->
 
-    <!-- NAVBAR -->
+        <nav id="main-navbar">
 
-    <nav id="main-navbar">
+            <div id="myTopnav" class="flex-container-nav">
+                <a href="#home"><img class="flex-img" src="assets/img/logo.png"></a>
+                <a class="flex-item" href="#nosotros">Nosotros</a>
+                <a class="flex-item" href="#preescolar">Preescolar</a>
+                <a class="flex-item" href="#primaria">Primaria</a>
+                <a class="flex-item" href="#secundaria">Secundaria</a>
+                <a class="flex-item" href="#contacto">Contacto</a>
+                <a class="flex-item" href="#ubicacion">Ubicación</a>
+            </div>
 
-        <div id="myTopnav" class="flex-container-nav" style="position:fixed; z-index:200; width: 100%">
-            <a href="#home"><img class="flex-img" src="assets/img/logo.png"></a>
-            <a class="flex-item" href="#nosotros">Nosotros</a>
-            <a class="flex-item" href="#preescolar">Preescolar</a>
-            <a class="flex-item" href="#primaria">Primaria</a>
-            <a class="flex-item" href="#secundaria">Secundaria</a>
-            <a class="flex-item" href="#contacto">Contacto</a>
-            <a class="flex-item" href="#ubicacion">Ubicación</a>
-        </div>
+        </nav>
 
-    </nav>
+        <nav id="responsive-navbar">
 
-    <nav id="responsive-navbar">
+            <div id="responsiveBar" class="flex-container-nav">
+                <a href="#home"><img class="flex-img" src="assets/img/logo.png"></a>
+                <a onclick="myFunction()"><img class="flex-img" src="assets/img/menu.png"></a>
+            </div>
 
-        <div id="responsiveBar" class="flex-container-nav" style="position:fixed; z-index:200; width: 100%">
-            <a href="#home"><img class="flex-img" src="assets/img/logo.png"></a>
-            <a onclick="myFunction()"><img class="flex-img" src="assets/img/menu.png"></a>
-        </div>
+            <div id="responsiveNavbar" class="flex-container-nav-responsive">
+                <a id="menu-bottom" onclick="myFunction()"><img class="flex-img" src="assets/img/menu.png"></a>
+                <a class="flex-item" href="#nosotros">Nosotros</a>
+                <a class="flex-item" href="#preescolar">Preescolar</a>
+                <a class="flex-item" href="#primaria">Primaria</a>
+                <a class="flex-item" href="#secundaria">Secundaria</a>
+                <a class="flex-item" href="#contacto">Contacto</a>
+                <a class="flex-item" href="#ubicacion">Ubicación</a>
+            </div>
 
-        <div id="responsiveNavbar" class="flex-container-nav-responsive">
-            <a id="menu-bottom" onclick="myFunction()"><img class="flex-img" src="assets/img/menu.png"></a>
-            <a class="flex-item" href="#nosotros">Nosotros</a>
-            <a class="flex-item" href="#preescolar">Preescolar</a>
-            <a class="flex-item" href="#primaria">Primaria</a>
-            <a class="flex-item" href="#secundaria">Secundaria</a>
-            <a class="flex-item" href="#contacto">Contacto</a>
-            <a class="flex-item" href="#ubicacion">Ubicación</a>
-        </div>
+        </nav>
 
-    </nav>
+        <!-- HEADER -->
 
-    <!-- HEADER -->
+        <section id="home" class="header flex-container-header">
+            <div>
+                <h1 class="text-header">Colegio Hispano Americano<br>Octavio Paz</h1>
+            </div>
+        </section>
 
-    <section id="home" class="header flex-container-header">
+        <!-- NOSOTROS -->
 
-        <div>
-            <h1 class="text-header">Colegio Hispano Americano<br>Octavio Paz</h1>
-        </div>
-    </section>
+        <section id="nosotros" class="flex-container-nosotros">
+            <div class="flex-container-nosotros-arriba">
+                <h2 class="title-nosotros">Misión</h2>
+                <p class="text-nosotros-a">
+                    La formación del alumno como ser humano con la plena conciencia de su capacidades, para el bien ser y el
+                    bienestar, mediante el desarrollo de la inteligencia, la afectividad y el cuerpo, extraer la grandeza que se encuentra dentro de
+                    cada persona enriquecido y profundizando la relación hacia el mismo, la familia y la comunidad, viviendo y fortaleciendo los valores
+                    humanos como son la paz, armonía, cooperación, honestidad, justicia, igualdad, comprensión, respeto, libertad, responsabilidad y amor
+                    a través de la implementación y así obtener su desarrollo integral.
+                </p>
+            </div>
 
-    <!-- NOSOTROS -->
+            <div class="flex-container-nosotros-abajo">
+                <h2 class="title-nosotros">Visión</h2>
+                <p class="text-nosotros-b">
+                    Anhelamos ser una institución que esté a la vanguardia, cuyo compromiso sea ver al alumno como protagonista
+                    de su formación presente, bajo un marco de solidaridad y cooperación, una escuela para contribuir con la comunidad a la formación de
+                    alumnos con carácter humanista donde sean capaces de practicar la reflexión, comprensión, comportamiento crítico y respuesta creativas
+                    ante un mundo en adopción de modelos económicos que tienden a modificarnos como sociedad, en la que nuestros alumnos asumirán un papel
+                    social como agentes de cambio, para lograrlo la escuela brinda una óptima calidad en la formación de los educados, desarrollando sus
+                    múltiples inteligencia.
+                </p>
+            </div>
+        </section>
 
-    <section id="nosotros" class="flex-container-nosotros">
+        <!-- OFERTA -->
 
-        <div class="flex-container-nosotros-arriba">
-            <h2 class="title-nosotros">Misión</h2>
-            <p class="text-nosotros-a">
-                La formación del alumno como ser humano con la plena conciencia de su capacidades, para el bien ser y el
-                bienestar, mediante el desarrollo de la inteligencia, la afectividad y el cuerpo, extraer la grandeza que se encuentra dentro de
-                cada persona enriquecido y profundizando la relación hacia el mismo, la familia y la comunidad, viviendo y fortaleciendo los valores
-                humanos como son la paz, armonía, cooperación, honestidad, justicia, igualdad, comprensión, respeto, libertad, responsabilidad y amor
-                a través de la implementación y así obtener su desarrollo integral.
+        <section>
+
+            <div id="preescolar" class="flex-container-oferta">
+
+                <div class="header-oferta">
+                    <h2 class="oferta-h2">Preescolar</h2>
+                    <h3 class="oferta-h3">C.C.T 15PJN5270O</h3>
+                    <p class="oferta-p">
+                        La finalidad de la educación es lograr que el niño aprenda de un ambiente que le produzca
+                        felicidad; no hay aprendizaje que valga si desanima o roba la alegría, la educación debe
+                        ayudar al niño a solucionar problemas que se le presentan al contacto con su medio fisico y social.
+                    </p>
+                </div>
+
+                <div class="materias-container">
+
+                    <div class="oferta-materia">
+                        <p>
+                            <ion-icon class="icon-size" name="book"></ion-icon><br>Programa oficial de la S.E.P.
+                        </p>
+                    </div>
+
+                    <div class="oferta-materia">
+                        <p>
+                            <ion-icon class="icon-size" name="color-palette"></ion-icon><br>Artes
+                        </p>
+                    </div>
+
+                    <div class="oferta-materia">
+                        <p>
+                            <ion-icon class="icon-size" name="chatbubbles"></ion-icon><br>Lenguaje y comunicación
+                        </p>
+                    </div>
+
+                    <div class="oferta-materia">
+                        <p>
+                            <ion-icon class="icon-size" name="calculator"></ion-icon><br>Lógico matemáticas
+                        </p>
+                    </div>
+
+                    <div class="oferta-materia">
+                        <p>
+                            <ion-icon class="icon-size" name="nuclear"></ion-icon><br>Ciencias
+                        </p>
+                    </div>
+
+                    <div class="oferta-materia">
+                        <p>
+                            <ion-icon class="icon-size" name="walk"></ion-icon><br>Psicomotricidad
+                        </p>
+                    </div>
+
+                    <div class="oferta-materia">
+                        <p>
+                            <ion-icon class="icon-size" name="mail"></ion-icon><br>Lectura y escritura
+                        </p>
+                    </div>
+
+                    <div class="oferta-materia">
+                        <p>
+                            <ion-icon class="icon-size" name="globe"></ion-icon><br>Inglés
+                        </p>
+                    </div>
+
+                    <div class="oferta-materia">
+                        <p>
+                            <ion-icon class="icon-size" name="desktop"></ion-icon><br>Computación
+                        </p>
+                    </div>
+
+                    <div class="oferta-materia">
+                        <p>
+                            <ion-icon class="icon-size" name="water"></ion-icon><br>Natación<br>
+                            <span>
+                                Servicio no incluido en la colegiatura
+                            </span>
+                        </p>
+                    </div>
+
+                    <div class="oferta-materia">
+                        <p>
+                            <ion-icon class="icon-size" name="football"></ion-icon><br>Juegos infantiles
+                        </p>
+                    </div>
+
+                    <div class="oferta-materia">
+                        <p>
+                            <ion-icon class="icon-size" name="bus"></ion-icon><br>Transporte escolar (Opcional)
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="stats" class="flex-container-count">
+
+                <div class="box-count">
+
+                    <div class="count-element">
+
+                        <div class="count-text">
+                            <ion-icon name="chatbubbles"></ion-icon>
+                            <h3><span class="counter">34</span> +</h3>
+                            <p>Platicas de profesionales</p>
+                        </div>
+                    </div>
+
+                    <div class="count-element">
+
+                        <div class="count-text">
+                            <ion-icon name="flask"></ion-icon>
+                            <h3><span class="counter">12</span> +</h3>
+                            <p>Proyectos de ciencias anuales</p>
+                        </div>
+                    </div>
+
+                    <div class="count-element">
+
+                        <div class="count-text">
+                            <ion-icon name="book"></ion-icon>
+                            <h3><span class="counter">30</span> +</h3>
+                            <p>Libros promedio leidos por niño</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="primaria" class="flex-container-oferta">
+
+                <div class="header-oferta">
+                    <h2 class="oferta-h2">Primaria</h2>
+                    <h3 class="oferta-h3">C.C.T 15PPR3113A</h3>
+                    <p class="oferta-p">
+                        La formación deberá intentar el desarrollo equilibrado y completo del niño en las áreas cognoscitivo,
+                        afectivo, fisiológica y del espíritu atendiendo a la personalidad individual en donde el docente se convertirá en ayuda para que los alumnos
+                        tengan iniciativas propias para el aprendizaje y que les permitan salir avantes al encontrarse con las leyes de la vida social.
+                    </p>
+                </div>
+
+                <div class="materias-container">
+
+                    <div class="oferta-materia">
+                        <p>
+                            <ion-icon class="icon-size" name="book"></ion-icon><br>Programa oficial de la S.E.P.
+                        </p>
+                    </div>
+
+                    <div class="oferta-materia">
+                        <p>
+                            <ion-icon class="icon-size" name="construct"></ion-icon><br>Talleres
+                        </p>
+                    </div>
+
+                    <div class="oferta-materia">
+                        <p>
+                            <ion-icon class="icon-size" name="chatbubbles"></ion-icon><br>Lenguaje y comunicación
+                        </p>
+                    </div>
+
+                    <div class="oferta-materia">
+                        <p>
+                            <ion-icon class="icon-size" name="calculator"></ion-icon><br>Álgebra
+                        </p>
+                    </div>
+
+                    <div class="oferta-materia">
+                        <p>
+                            <ion-icon class="icon-size" name="water"></ion-icon><br>Natación
+                        </p>
+                    </div>
+
+                    <div class="oferta-materia">
+                        <p>
+                            <ion-icon class="icon-size" name="globe"></ion-icon><br>Inglés
+                        </p>
+                    </div>
+
+                    <div class="oferta-materia">
+                        <p>
+                            <ion-icon class="icon-size" name="musical-notes"></ion-icon><br>Música
+                        </p>
+                    </div>
+
+                    <div class="oferta-materia">
+                        <p>
+                            <ion-icon class="icon-size" name="desktop"></ion-icon><br>Computación
+                        </p>
+                    </div>
+
+                    <div class="oferta-materia">
+                        <p>
+                            <ion-icon class="icon-size" name="bus"></ion-icon><br>Transporte escolar (Opcional)
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div id="stats" class="flex-container-count">
+
+                <div class="box-count">
+
+                    <div class="count-element">
+
+                        <div class="count-text">
+                            <ion-icon name="chatbubbles"></ion-icon>
+                            <h3><span class="counter">34</span> +</h3>
+                            <p>Platicas de profesionales</p>
+                        </div>
+                    </div>
+
+                    <div class="count-element">
+
+                        <div class="count-text">
+                            <ion-icon name="flask"></ion-icon>
+                            <h3><span class="counter">12</span> +</h3>
+                            <p>Proyectos de ciencias anuales</p>
+                        </div>
+                    </div>
+
+                    <div class="count-element">
+
+                        <div class="count-text">
+                            <ion-icon name="book"></ion-icon>
+                            <h3><span class="counter">30</span> +</h3>
+                            <p>Libros promedio leidos por niño</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="secundaria" class="flex-container-oferta">
+
+                <div class="header-oferta">
+                    <h2 class="oferta-h2">Secundaria</h2>
+                    <h3 class="oferta-h3">C.C.T 15PES0920B</h3>
+                    <p class="oferta-p">
+                        Concientes de la importancia del trabajo educativo, de la satisfacción de lo que se hace, del deseo de educar bajo
+                        paradigmas que correspondan a los constantes cambios sociales, conocedores de que la escuela es útil al desarrollo integral del alumno, sin
+                        duda un compromiso ineludible el trabajar de manera consciente en actividades creadoras que garanticen un aprendizaje autentico, vivo y
+                        real, que vincule alalumno con el nivel inmediato superior.
+                    </p>
+                </div>
+
+                <div class="materias-container">
+
+                    <div class="oferta-materia">
+                        <p>
+                            <ion-icon class="icon-size" name="book"></ion-icon><br>Programa oficial de la S.E.P.
+                        </p>
+                    </div>
+
+                    <div class="oferta-materia">
+                        <p>
+                            <ion-icon class="icon-size" name="construct"></ion-icon><br>Talleres
+                        </p>
+                    </div>
+
+                    <div class="oferta-materia">
+                        <p>
+                            <ion-icon class="icon-size" name="chatbubbles"></ion-icon><br>Lenguaje y comunicación
+                        </p>
+                    </div>
+
+                    <div class="oferta-materia">
+                        <p>
+                            <ion-icon class="icon-size" name="calculator"></ion-icon><br>Álgebra
+                        </p>
+                    </div>
+
+                    <div class="oferta-materia">
+                        <p>
+                            <ion-icon class="icon-size" name="water"></ion-icon><br>Natación
+                        </p>
+                    </div>
+
+                    <div class="oferta-materia">
+                        <p>
+                            <ion-icon class="icon-size" name="nuclear"></ion-icon><br>Laboratorio
+                        </p>
+                    </div>
+
+                    <div class="oferta-materia">
+                        <p>
+                            <ion-icon class="icon-size" name="logo-ionitron"></ion-icon><br>Robótica
+                        </p>
+                    </div>
+
+                    <div class="oferta-materia">
+                        <p>
+                            <ion-icon class="icon-size" name="globe"></ion-icon><br>Inglés
+                        </p>
+                    </div>
+
+                    <div class="oferta-materia">
+                        <p>
+                            <ion-icon class="icon-size" name="musical-notes"></ion-icon><br>Música
+                        </p>
+                    </div>
+
+                    <div class="oferta-materia">
+                        <p>
+                            <ion-icon class="icon-size" name="desktop"></ion-icon><br>Computación
+                        </p>
+                    </div>
+
+                    <div class="oferta-materia">
+                        <p>
+                            <ion-icon class="icon-size" name="bus"></ion-icon><br>Transporte escolar (Opcional)
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div id="stats" class="flex-container-count">
+
+                <div class="box-count">
+
+                    <div class="count-element">
+
+                        <div class="count-text">
+                            <ion-icon name="chatbubbles"></ion-icon>
+                            <h3><span class="counter">34</span> +</h3>
+                            <p>Platicas de profesionales</p>
+                        </div>
+                    </div>
+
+                    <div class="count-element">
+
+                        <div class="count-text">
+                            <ion-icon name="flask"></ion-icon>
+                            <h3><span class="counter">12</span> +</h3>
+                            <p>Proyectos de ciencias anuales</p>
+                        </div>
+                    </div>
+
+                    <div class="count-element">
+
+                        <div class="count-text">
+                            <ion-icon name="book"></ion-icon>
+                            <h3><span class="counter">30</span> +</h3>
+                            <p>Libros promedio leidos por niño</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- CONTACTO -->
+
+        <section id="contacto" class="flex-container-contacto">
+
+            <div class="flex-box-contacto">
+
+                <div class="identation-text">
+                    <h2 class="title-contacto">Contacto</h2>
+                    <p class="text-highlighted">
+                        Sé un Octavio Paz Student Excellence
+                        <p class="text-contacto">
+                            Preguntanos lo que deseés y con gusto te proporcionaremos la información que necesites para pertenecer a esta gran institución educativa.
+                        </p>
+                </div>
+            </div>
+
+            <div class="flex-box-contacto-b">
+                <form method="POST" action="https://formspree.io/chaop3_edu@hotmail.com">
+                    <label for="fname">Nombre</label>
+                    <br>
+                    <input type="text" id="fname" name="firstname" placeholder="Nombre..">
+                    <br>
+                    <label for="femail">Correo</label>
+                    <br>
+                    <input type="email" id="femail" name="email" placeholder="Correo..">
+                    <br>
+                    <label for="fnivel">Nivel escolar</label>
+                    <br>
+                    <select id="fnivel" name="nivel">
+                        <option value="general"></option>
+                        <option value="preescolar">Preescolar</option>
+                        <option value="primaria">Primaria</option>
+                        <option value="secundaria">Secundaria</option>
+                    </select>
+                    <br>
+                    <label for="fmensaje">Mensaje</label><br>
+                    <textarea type="text" id="fmensaje" name="comment" rows="4" cols="50" placeholder="Mensaje.."></textarea>
+                    <br>
+                    <input type="submit" value="Enviar">
+                </form>
+            </div>
+        </section>
+
+        <!-- UBICACIÓN -->
+
+        <section id="ubicacion" class="flex-container-map">
+            <h2 class="map-title">Ubicación</h2>
+            <p class="map-direccion">
+                Av. de las Torres no.16, San Lorenzo, Chimalhuacán, Estado de México, México.
             </p>
-        </div>
 
-        <div class="flex-container-nosotros-abajo">
-            <h2 class="title-nosotros">Visión</h2>
-            <p class="text-nosotros-b">
-                Anhelamos ser una institución que esté a la vanguardia, cuyo compromiso sea ver al alumno como protagonista
-                de su formación presente, bajo un marco de solidaridad y cooperación, una escuela para contribuir con la comunidad a la formación de
-                alumnos con carácter humanista donde sean capaces de practicar la reflexión, comprensión, comportamiento crítico y respuesta creativas
-                ante un mundo en adopción de modelos económicos que tienden a modificarnos como sociedad, en la que nuestros alumnos asumirán un papel
-                social como agentes de cambio, para lograrlo la escuela brinda una óptima calidad en la formación de los educados, desarrollando sus
-                múltiples inteligencia.
-            </p>
-        </div>
-    </section>
+            <div id="map"></div>
+        </section>
 
-    <!-- OFERTA -->
+        <!-- FOOTER -->
 
-    <section>
+        <div class="flex-container-footer">
 
-        <div id="preescolar" class="flex-container-oferta">
+            <div class="footer-box-content">
 
-            <div class="header-oferta">
-                <h2 class="oferta-h2">Preescolar</h2>
-                <h3 class="oferta-h3">C.C.T 15PJN5270O</h3>
-                <p class="oferta-p">
-                    La finalidad de la educación es lograr que el niño aprenda de un ambiente que le produzca
-                    felicidad; no hay aprendizaje que valga si desanima o roba la alegría, la educación debe
-                    ayudar al niño a solucionar problemas que se le presentan al contacto con su medio fisico y social.
-                </p>
-            </div>
-
-            <div class="materias-container">
-
-                <div class="oferta-materia">
-                    <p>
-                        <ion-icon class="icon-size" name="book"></ion-icon><br>Programa oficial de la S.E.P.
-                    </p>
+                <div class="footer-header">
+                    <img class="footer-logo" src="assets/img/logo.png">
+                    <p style="font-family:RalewaySemiBold; font-size:20px">"Educación Humanista para la Libertad del Ser"<br></p>
+                    <p>Sientete libre de contactarnos, con gusto te atenderemos y responderemos todas tus respuestas. <br></p>
+                    <p style="font-family:RalewayRegular; font-size:20px">+52 1 58 51 68 39</p>
                 </div>
 
-                <div class="oferta-materia">
-                    <p>
-                        <ion-icon class="icon-size" name="color-palette"></ion-icon><br>Artes
-                    </p>
-                </div>
+                <div class="footer-socials">
 
-                <div class="oferta-materia">
-                    <p>
-                        <ion-icon class="icon-size" name="chatbubbles"></ion-icon><br>Lenguaje y comunicación
-                    </p>
-                </div>
+                    <div class="social"><a target="_blank" href="https://www.facebook.com/hispanoamericanooctaviopaz/">
+                            <ion-icon name="logo-facebook"></ion-icon>
+                        </a></div>
 
-                <div class="oferta-materia">
-                    <p>
-                        <ion-icon class="icon-size" name="calculator"></ion-icon><br>Lógico matemáticas
-                    </p>
-                </div>
+                    <div class="social"><a target="_blank" href="https://twitter.com/ColOctavioPaz">
+                            <ion-icon name="logo-twitter"></ion-icon>
+                        </a></div>
 
-                <div class="oferta-materia">
-                    <p>
-                        <ion-icon class="icon-size" name="nuclear"></ion-icon><br>Ciencias
-                    </p>
-                </div>
+                    <div class="social"><a target="_blank" href="https://www.instagram.com/colegiooctaviopaz/">
+                            <ion-icon name="logo-instagram"></ion-icon>
+                        </a></div>
 
-                <div class="oferta-materia">
-                    <p>
-                        <ion-icon class="icon-size" name="walk"></ion-icon><br>Psicomotricidad
-                    </p>
-                </div>
+                    <div class="social"><a target="_blank" href="mailto:chaop3_edu@hotmail.com?subject=Información">
+                            <ion-icon name="mail"></ion-icon>
+                        </a></div>
 
-                <div class="oferta-materia">
-                    <p>
-                        <ion-icon class="icon-size" name="mail"></ion-icon><br>Lectura y escritura
-                    </p>
-                </div>
-
-                <div class="oferta-materia">
-                    <p>
-                        <ion-icon class="icon-size" name="globe"></ion-icon><br>Inglés
-                    </p>
-                </div>
-
-                <div class="oferta-materia">
-                    <p>
-                        <ion-icon class="icon-size" name="desktop"></ion-icon><br>Computación
-                    </p>
-                </div>
-
-                <div class="oferta-materia">
-                    <p>
-                        <ion-icon class="icon-size" name="water"></ion-icon><br>Natación
-                    </p>
-                </div>
-
-                <div class="oferta-materia">
-                    <p>
-                        <ion-icon class="icon-size" name="football"></ion-icon><br>Juegos infantiles
-                    </p>
-                </div>
-
-                <div class="oferta-materia">
-                    <p>
-                        <ion-icon class="icon-size" name="bus"></ion-icon><br>Transporte escolar (Opcional)
-                    </p>
-                </div>
-            </div>
-        </div>
-
-        <div id="stats" class="flex-container-count">
-
-            <div class="box-count">
-
-                <div class="count-element">
-
-                    <div class="count-text">
-                        <ion-icon name="chatbubbles"></ion-icon>
-                        <h3><span class="counter">34</span> +</h3>
-                        <p>Platicas de profesionales</p>
-                    </div>
-                </div>
-
-                <div class="count-element">
-
-                    <div class="count-text">
-                        <ion-icon name="flask"></ion-icon>
-                        <h3><span class="counter">12</span> +</h3>
-                        <p>Proyectos de ciencias anuales</p>
-                    </div>
-                </div>
-
-                <div class="count-element">
-
-                    <div class="count-text">
-                        <ion-icon name="book"></ion-icon>
-                        <h3><span class="counter">30</span> +</h3>
-                        <p>Libros promedio leidos por niño</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div id="primaria" class="flex-container-oferta">
-
-            <div class="header-oferta">
-                <h2 class="oferta-h2">Primaria</h2>
-                <h3 class="oferta-h3">C.C.T 15PPR3113A</h3>
-                <p class="oferta-p">
-                    La formación deberá intentar el desarrollo equilibrado y completo del niño en las áreas cognoscitivo,
-                    afectivo, fisiológica y del espíritu atendiendo a la personalidad individual en donde el docente se convertirá en ayuda para que los alumnos
-                    tengan iniciativas propias para el aprendizaje y que les permitan salir avantes al encontrarse con las leyes de la vida social.
-                </p>
-            </div>
-
-            <div class="materias-container">
-
-                <div class="oferta-materia">
-                    <p>
-                        <ion-icon class="icon-size" name="book"></ion-icon><br>Programa oficial de la S.E.P.
-                    </p>
-                </div>
-
-                <div class="oferta-materia">
-                    <p>
-                        <ion-icon class="icon-size" name="construct"></ion-icon><br>Talleres
-                    </p>
-                </div>
-
-                <div class="oferta-materia">
-                    <p>
-                        <ion-icon class="icon-size" name="chatbubbles"></ion-icon><br>Lenguaje y comunicación
-                    </p>
-                </div>
-
-                <div class="oferta-materia">
-                    <p>
-                        <ion-icon class="icon-size" name="calculator"></ion-icon><br>Álgebra
-                    </p>
-                </div>
-
-                <div class="oferta-materia">
-                    <p>
-                        <ion-icon class="icon-size" name="water"></ion-icon><br>Natación
-                    </p>
-                </div>
-
-                <div class="oferta-materia">
-                    <p>
-                        <ion-icon class="icon-size" name="globe"></ion-icon><br>Inglés
-                    </p>
-                </div>
-
-                <div class="oferta-materia">
-                    <p>
-                        <ion-icon class="icon-size" name="musical-notes"></ion-icon><br>Música
-                    </p>
-                </div>
-
-                <div class="oferta-materia">
-                    <p>
-                        <ion-icon class="icon-size" name="desktop"></ion-icon><br>Computación
-                    </p>
-                </div>
-
-                <div class="oferta-materia">
-                    <p>
-                        <ion-icon class="icon-size" name="bus"></ion-icon><br>Transporte escolar (Opcional)
-                    </p>
+                    <div class="social"><a href="tel:+5258516839">
+                            <ion-icon name="call"></ion-icon>
+                        </a></div>
                 </div>
             </div>
 
-        </div>
-
-        <div id="stats" class="flex-container-count">
-
-            <div class="box-count">
-
-                <div class="count-element">
-
-                    <div class="count-text">
-                        <ion-icon name="chatbubbles"></ion-icon>
-                        <h3><span class="counter">34</span> +</h3>
-                        <p>Platicas de profesionales</p>
-                    </div>
-                </div>
-
-                <div class="count-element">
-
-                    <div class="count-text">
-                        <ion-icon name="flask"></ion-icon>
-                        <h3><span class="counter">12</span> +</h3>
-                        <p>Proyectos de ciencias anuales</p>
-                    </div>
-                </div>
-
-                <div class="count-element">
-
-                    <div class="count-text">
-                        <ion-icon name="book"></ion-icon>
-                        <h3><span class="counter">30</span> +</h3>
-                        <p>Libros promedio leidos por niño</p>
-                    </div>
-                </div>
+            <div class="box-copyright">
+                <span>© 2018 <a href="#home">Colegio Hispano Americano Octavio Paz</a>, All Rights Reserved.</span>
             </div>
         </div>
 
-        <div id="secundaria" class="flex-container-oferta">
+        <!-- IMPORT OF THE JS -->
+        <script type="text/javascript" src="js/animation.js"></script>
 
-            <div class="header-oferta">
-                <h2 class="oferta-h2">Secundaria</h2>
-                <h3 class="oferta-h3">C.C.T 15PES0920B</h3>
-                <p class="oferta-p">
-                    Concientes de la importancia del trabajo educativo, de la satisfacción de lo que se hace, del deseo de educar bajo
-                    paradigmas que correspondan a los constantes cambios sociales, conocedores de que la escuela es útil al desarrollo integral del alumno, sin
-                    duda un compromiso ineludible el trabajar de manera consciente en actividades creadoras que garanticen un aprendizaje autentico, vivo y
-                    real, que vincule alalumno con el nivel inmediato superior.
-                </p>
-            </div>
+        <!-- IMPORT OF THE ICONS -->
+        <script src="https://unpkg.com/ionicons@4.4.2/dist/ionicons.js"></script>
 
-            <div class="materias-container">
+        <!-- IMPORT FOR THE COUNTER -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
+        <script src="js/jquery.counterup.min.js"></script>
 
-                <div class="oferta-materia">
-                    <p>
-                        <ion-icon class="icon-size" name="book"></ion-icon><br>Programa oficial de la S.E.P.
-                    </p>
-                </div>
-
-                <div class="oferta-materia">
-                    <p>
-                        <ion-icon class="icon-size" name="construct"></ion-icon><br>Talleres
-                    </p>
-                </div>
-
-                <div class="oferta-materia">
-                    <p>
-                        <ion-icon class="icon-size" name="chatbubbles"></ion-icon><br>Lenguaje y comunicación
-                    </p>
-                </div>
-
-                <div class="oferta-materia">
-                    <p>
-                        <ion-icon class="icon-size" name="calculator"></ion-icon><br>Álgebra
-                    </p>
-                </div>
-
-                <div class="oferta-materia">
-                    <p>
-                        <ion-icon class="icon-size" name="water"></ion-icon><br>Natación
-                    </p>
-                </div>
-
-                <div class="oferta-materia">
-                    <p>
-                        <ion-icon class="icon-size" name="nuclear"></ion-icon><br>Laboratorio
-                    </p>
-                </div>
-
-                <div class="oferta-materia">
-                    <p>
-                        <ion-icon class="icon-size" name="logo-ionitron"></ion-icon><br>Robótica
-                    </p>
-                </div>
-
-                <div class="oferta-materia">
-                    <p>
-                        <ion-icon class="icon-size" name="globe"></ion-icon><br>Inglés
-                    </p>
-                </div>
-
-                <div class="oferta-materia">
-                    <p>
-                        <ion-icon class="icon-size" name="musical-notes"></ion-icon><br>Música
-                    </p>
-                </div>
-
-                <div class="oferta-materia">
-                    <p>
-                        <ion-icon class="icon-size" name="desktop"></ion-icon><br>Computación
-                    </p>
-                </div>
-
-                <div class="oferta-materia">
-                    <p>
-                        <ion-icon class="icon-size" name="bus"></ion-icon><br>Transporte escolar (Opcional)
-                    </p>
-                </div>
-            </div>
-
-        </div>
-
-        <div id="stats" class="flex-container-count">
-
-            <div class="box-count">
-
-                <div class="count-element">
-
-                    <div class="count-text">
-                        <ion-icon name="chatbubbles"></ion-icon>
-                        <h3><span class="counter">34</span> +</h3>
-                        <p>Platicas de profesionales</p>
-                    </div>
-                </div>
-
-                <div class="count-element">
-
-                    <div class="count-text">
-                        <ion-icon name="flask"></ion-icon>
-                        <h3><span class="counter">12</span> +</h3>
-                        <p>Proyectos de ciencias anuales</p>
-                    </div>
-                </div>
-
-                <div class="count-element">
-
-                    <div class="count-text">
-                        <ion-icon name="book"></ion-icon>
-                        <h3><span class="counter">30</span> +</h3>
-                        <p>Libros promedio leidos por niño</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-    </section>
-
-    <!-- CONTACTO -->
-
-    <section id="contacto" class="flex-container-contacto">
-
-        <div class="flex-box-contacto">
-
-            <div class="identation-text">
-                <h2 class="title-contacto">Contacto</h2>
-                <p class="text-highlighted">
-                    Sé un Octavio Paz Student Excellence
-                    <p class="text-contacto">
-                        Preguntanos lo que deseés y con gusto te proporcionaremos la información que necesites para pertenecer a esta gran institución educativa.
-                    </p>
-            </div>
-        </div>
-
-        <div class="flex-box-contacto-b">
-            <form method="POST" action="https://formspree.io/chaop3_edu@hotmail.com">
-                <label for="fname">Nombre</label>
-                <br>
-                <input type="text" id="fname" name="firstname" placeholder="Nombre..">
-                <br>
-                <label for="femail">Correo</label>
-                <br>
-                <input type="email" id="femail" name="email" placeholder="Correo..">
-                <br>
-                <label for="fnivel">Nivel escolar</label>
-                <br>
-                <select id="fnivel" name="nivel">
-                    <option value="general"></option>
-                    <option value="preescolar">Preescolar</option>
-                    <option value="primaria">Primaria</option>
-                    <option value="secundaria">Secundaria</option>
-                </select>
-                <br>
-                <label for="fmensaje">Mensaje</label><br>
-                <textarea type="text" id="fmensaje" name="comment" rows="4" cols="50" placeholder="Mensaje.."></textarea>
-                <br>
-                <input type="submit" value="Enviar">
-            </form>
-        </div>
-    </section>
-
-    <!-- UBICACIÓN -->
-
-    <section id="ubicacion" class="flex-container-map">
-        <h2 class="map-title">Ubicación</h2>
-        <p class="map-direccion">
-            Av. de las Torres no.16, San Lorenzo, Chimalhuacán, Estado de México, México.
-        </p>
-
-        <div id="map"></div>
-    </section>
-
-    <!-- FOOTER -->
-
-    <div class="flex-container-footer">
-
-        <div class="footer-box-content">
-
-            <div class="footer-header">
-                <img class="footer-logo" src="assets/img/logo.png">
-                <p style="font-family:RalewaySemiBold; font-size:20px">"Educación Humanista para la Libertad del Ser"<br></p>
-                <p>Sientete libre de contactarnos, con gusto te atenderemos y responderemos todas tus respuestas. <br></p>
-                <p style="font-family:RalewayRegular; font-size:20px">+52 1 58 51 68 39</p>
-            </div>
-
-            <div class="footer-socials">
-
-                <div class="social"><a target="_blank" href="https://www.facebook.com/hispanoamericanooctaviopaz/">
-                        <ion-icon name="logo-facebook"></ion-icon>
-                    </a></div>
-
-                <div class="social"><a target="_blank" href="https://twitter.com/ColOctavioPaz">
-                        <ion-icon name="logo-twitter"></ion-icon>
-                    </a></div>
-
-                <div class="social"><a target="_blank" href="https://www.instagram.com/colegiooctaviopaz/">
-                        <ion-icon name="logo-instagram"></ion-icon>
-                    </a></div>
-
-                <div class="social"><a target="_blank" href="mailto:chaop3_edu@hotmail.com?subject=Información">
-                        <ion-icon name="mail"></ion-icon>
-                    </a></div>
-
-                <div class="social"><a href="tel:+5258516839">
-                        <ion-icon name="call"></ion-icon>
-                    </a></div>
-            </div>
-        </div>
-
-        <div class="box-copyright">
-            <span>© 2018 <a href="#home">Colegio Hispano Americano Octavio Paz</a>, All Rights Reserved.</span>
-        </div>
-    </div>
-
-    <!-- IMPORT OF THE JS -->
-    <script type="text/javascript" src="js/animation.js"></script>
-
-    <!-- IMPORT OF THE ICONS -->
-    <script src="https://unpkg.com/ionicons@4.4.2/dist/ionicons.js"></script>
-
-    <!-- IMPORT FOR THE COUNTER -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
-    <script src="js/jquery.counterup.min.js"></script>
-
-    <!-- SCRIPT FOR USE THE MAP-->
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBZmfWWgr8jksWlIJSoZOs4JNn-G8cf68U&callback=initMap" async defer></script>
-</body>
+        <!-- SCRIPT FOR USE THE MAP-->
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBZmfWWgr8jksWlIJSoZOs4JNn-G8cf68U&callback=initMap" async defer></script>
+    </body>
 
 </html>

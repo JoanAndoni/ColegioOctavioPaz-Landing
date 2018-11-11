@@ -72,10 +72,18 @@ h2::first-letter {
     flex-wrap: wrap;
     min-height: 6vh;
     height: auto;
-    width: auto;
+    width: 100%;
     align-items: center;
     justify-content: center;
+    position: fixed;
     transition: 1.2s;
+    z-index: 3;
+}
+
+span {
+    font-family: "RalewayRegular";
+    font-size: 10px;
+    line-height: 20%;
 }
 
 .flex-container-nav li {
@@ -118,14 +126,15 @@ h2::first-letter {
 
 #responsive-navbar {
     display: none;
+    width: 100vw;
 }
 
-.flex-container-nav-responsive {
+#responsiveNavbar {
     display: -webkit-box;
     display: -moz-box;
     display: -ms-flexbox;
     display: -webkit-flex;
-    display: none;
+    display: flex;
     -webkit-flex-flow: row wrap;
     flex-direction: column;
     flex-wrap: wrap;
@@ -134,8 +143,15 @@ h2::first-letter {
     height: 100vh;
     background: rgba(0, 0, 0, 0.700);
     width: auto;
-    z-index: 200;
+    z-index: 2;
     position: fixed;
+    overflow: hidden;
+    transform: translateX(-100%);
+    transition: all 1s ease-out;
+}
+
+#menu-bottom {
+    margin-left: 40px;
 }
 
 /* Mobile and iPad Portrait */
