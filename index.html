@@ -14,17 +14,16 @@
     <link rel="stylesheet" type="text/css" href="css/SuperResete.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
 
+    <!-- SCRIPT JQUERY -->
     <script src="js/jquery.min.js"></script>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-114667324-1"></script>
-
   </head>
 
   <body>
 
     <!-- NAVBAR -->
-
     <nav id="main-navbar">
       <div id="myTopnav" class="flex-container-nav">
         <a href="#home"><img class="flex-img" src="assets/img/logo.png"></a>
@@ -39,10 +38,10 @@
 
     <nav id="responsive-navbar">
       <div id="responsiveBar" class="flex-container-nav">
-        <a onclick="myFunction()"><img class="flex-img" src="assets/img/menu.png"></a>
+        <a onclick="responsiveNavbarFunction()"><img class="flex-img" src="assets/img/menu.png"></a>
       </div>
       <div id="responsiveNavbar" class="flex-container-nav-responsive">
-        <a id="menu-bottom" onclick="myFunction()"><img class="flex-img" src="assets/img/menu.png"></a>
+        <a id="menu-bottom" onclick="responsiveNavbarFunction()"><img class="flex-img" src="assets/img/menu.png"></a>
         <a class="flex-item" href="#nosotros">Nosotros</a>
         <a class="flex-item" href="#preescolar">Preescolar</a>
         <a class="flex-item" href="#primaria">Primaria</a>
@@ -50,19 +49,17 @@
         <a class="flex-item" href="#contacto">Contacto</a>
         <a class="flex-item" href="#ubicacion">Ubicación</a>
       </div>
-
     </nav>
 
     <!-- HEADER -->
-
     <section id="home" class="header flex-container-header">
       <div class="title">
-        <h1>Colegio Hispano Americano Octavio Paz</h1>
+        <h1 id="tituloColegio">Colegio Hispano Americano Octavio Paz</h1>
+        <p id="textoTitulo">Aqui esta este pedo</p>
       </div>
     </section>
 
     <!-- NOSOTROS -->
-
     <section id="nosotros" class="flex-container-nosotros">
       <div class="flex-container-nosotros-arriba">
         <h2 class="title-nosotros">Misión</h2>
@@ -88,8 +85,6 @@
       </div>
     </section>
 
-
-
     <!-- OFERTA -->
     <div class="align_popup">
       <div class="popupID">
@@ -112,9 +107,7 @@
     </div>
 
     <section>
-
       <div id="preescolar" class="flex-container-oferta">
-
         <div class="header-oferta">
           <h2 class="oferta-h2">Preescolar</h2>
           <h3 class="oferta-h3">C.C.T 15PJN5270O</h3>
@@ -124,14 +117,12 @@
             ayudar al niño a solucionar problemas que se le presentan al contacto con su medio fisico y social.
           </p>
         </div>
-
         <div class="materias-container">
           <div class="oferta-materia" onclick="popup(0, 0, 1, 0)">
             <p>
               <ion-icon class="icon-size" name="book"></ion-icon><br>Programa oficial de la S.E.P.
             </p>
           </div>
-
 
           <div class="oferta-materia" onclick="popup(0, 0, 1, 1)">
             <p>
@@ -556,18 +547,22 @@
       </div>
     </div>
 
-    <!-- IMPORT OF THE JS -->
-    <script type="text/javascript" src="js/animation.js"></script>
-
     <!-- IMPORT OF THE ICONS -->
     <script src="https://unpkg.com/ionicons@4.4.2/dist/ionicons.js"></script>
 
     <!-- IMPORT FOR THE COUNTER -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
-    <script src="js/jquery.counterup.min.js"></script>
+    <script src="js/counterUp/jquery.counterup.min.js"></script>
+
+    <!-- IMPORT OF THE SHUFFLE LETTERS -->
+    <script src="js/shuffleLetters/jquery.shuffleLetters.js"></script>
 
     <!-- SCRIPT FOR USE THE MAP-->
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBZmfWWgr8jksWlIJSoZOs4JNn-G8cf68U&callback=initMap" async defer></script>
+
+    <!-- IMPORT OF THE JS -->
+    <script type="text/javascript" src="js/animation.js"></script>
+
   </body>
 
 </html>
