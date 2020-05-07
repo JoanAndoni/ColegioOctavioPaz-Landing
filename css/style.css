@@ -44,22 +44,6 @@ h2::first-letter {
 .flex-img {
   width: 30px;
   height: auto;
-  -webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
-  transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
-}
-
-.flex-img::after {
-  -webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
-  transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
-}
-
-.flex-img:hover {
-  -webkit-transform: scale(1.15, 1.15);
-  transform: scale(1.10, 1.10);
-}
-
-.flex-img:hover::after {
-  opacity: 1;
 }
 
 .flex-container-nav {
@@ -73,10 +57,11 @@ h2::first-letter {
   height: auto;
   width: 100%;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
   position: fixed;
   transition: 1.2s;
   z-index: 2;
+  padding: 10px 0;
 }
 
 #main-navbar {
@@ -88,15 +73,15 @@ h2::first-letter {
 }
 
 .flex-container-nav.black {
-  background: rgba(0, 0, 0, 0.700);
+  background: rgba(0, 0, 0, 0.75);
 }
 
 .flex-container-nav a {
   overflow: hidden;
   position: relative;
   display: inline-block;
-  margin-right: 2vw;
-  margin-left: 2vw;
+  margin-right: 1vw;
+  margin-left: 1vw;
   outline: none;
   color: white;
   text-decoration: none;
@@ -108,7 +93,7 @@ h2::first-letter {
   height: auto;
 }
 
-.flex-container-nav a span {
+.flex-container-nav .links a span {
   font-size: 18px;
   position: relative;
   display: inline-block;
@@ -117,7 +102,7 @@ h2::first-letter {
   transition: transform 0.3s;
 }
 
-.flex-container-nav a span::before {
+.flex-container-nav .links a span::before {
   top: 100%;
   position: absolute;
   content: attr(data-hover);
@@ -127,11 +112,28 @@ h2::first-letter {
   transform: translate3d(0, 0, 0);
 }
 
-.flex-container-nav a:hover span,
-.flex-container-nav a:focus span {
+.flex-container-nav .links a:hover span,
+.flex-container-nav .links a:focus span {
   -webkit-transform: translateY(-100%);
   -moz-transform: translateY(-100%);
   transform: translateY(-100%);
+}
+
+.btn-login {
+  color: white !important;
+  background-color: rgba(31, 154, 207, 0.9);
+  border-radius: 25px;
+  font-size: 14px;
+  padding: 8px 25px !important;
+  margin: 0 !important;
+  text-transform: initial !important;
+  font-family: "RalewayRegular" !important;
+}
+
+.btn-login:hover {
+  color: #fff;
+  font-family: "RalewaySemiBold" !important;
+  background-color: rgba(31, 154, 207, 1);
 }
 
 #responsive-navbar {
@@ -151,7 +153,7 @@ h2::first-letter {
   align-items: flex-start;
   justify-content: space-evenly;
   height: 100vh;
-  background: rgba(0, 0, 0, 0.700);
+  background: rgba(0, 0, 0, 0.7);
   width: auto;
   z-index: 2;
   position: fixed;
@@ -177,7 +179,7 @@ h2::first-letter {
   .flex-container-nav {
     align-items: center;
     justify-content: space-between;
-    background: rgba(0, 0, 0, 0.700);
+    background: rgba(0, 0, 0, 0.7);
     padding-left: 10px;
     padding-top: 5px;
     padding-bottom: 5px;
@@ -213,7 +215,7 @@ h2::first-letter {
   .flex-container-nav {
     align-items: center;
     justify-content: space-between;
-    background: rgba(0, 0, 0, 0.700);
+    background: rgba(0, 0, 0, 0.7);
     padding-left: 10px;
     padding-top: 5px;
     padding-bottom: 5px;
@@ -249,7 +251,7 @@ h2::first-letter {
   .flex-container-nav {
     align-items: center;
     justify-content: space-between;
-    background: rgba(0, 0, 0, 0.700);
+    background: rgba(0, 0, 0, 0.7);
     padding-left: 10px;
     padding-top: 5px;
     padding-bottom: 5px;
@@ -368,10 +370,12 @@ h2::first-letter {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  background-image: linear-gradient(to bottom right, rgba(231, 76, 60, 1.0), rgba(231, 76, 60, 0.8)), url("../assets/img/work.jpg");
+  background-image: linear-gradient(to bottom right, rgba(231, 76, 60, 1), rgba(231, 76, 60, 0.8)),
+    url("../assets/img/work.jpg");
 }
 
-.flex-container-nosotros-arriba, .flex-container-nosotros-abajo {
+.flex-container-nosotros-arriba,
+.flex-container-nosotros-abajo {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -387,7 +391,7 @@ h2::first-letter {
   -webkit-flex-flow: row wrap;
   justify-content: center;
   flex-direction: column;
-  background-color: rgba(255, 255, 255, 0.200);
+  background-color: rgba(255, 255, 255, 0.2);
 }
 
 .flex-container-nosotros-abajo {
@@ -406,7 +410,8 @@ h2::first-letter {
   margin-left: 2vw;
 }
 
-.text-nosotros-a, .text-nosotros-b {
+.text-nosotros-a,
+.text-nosotros-b {
   text-align: left;
   font-size: 15px;
   line-height: 135%;
@@ -452,7 +457,7 @@ h2::first-letter {
   justify-content: flex-start;
   width: 90%;
   height: 90%;
-  background-color: rgba(0, 0, 0, 0.80);
+  background-color: rgba(0, 0, 0, 0.8);
   border-radius: 5px;
   color: white;
   padding: 15px;
@@ -538,7 +543,8 @@ h2::first-letter {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  background-image: linear-gradient(to bottom right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.2)), url("../assets/img/preescolar.jpg");
+  background-image: linear-gradient(to bottom right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.2)),
+    url("../assets/img/preescolar.jpg");
 }
 
 #primaria {
@@ -546,7 +552,8 @@ h2::first-letter {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  background-image: linear-gradient(to bottom right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.2)), url("../assets/img/primaria.jpg");
+  background-image: linear-gradient(to bottom right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.2)),
+    url("../assets/img/primaria.jpg");
 }
 
 #secundaria {
@@ -554,7 +561,8 @@ h2::first-letter {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  background-image: linear-gradient(to bottom right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.2)), url("../assets/img/secundaria.jpg");
+  background-image: linear-gradient(to bottom right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.2)),
+    url("../assets/img/secundaria.jpg");
 }
 
 .header-oferta {
@@ -676,7 +684,8 @@ h2::first-letter {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  background-image: linear-gradient(to bottom right, rgba(231, 76, 60, 1.0), rgba(231, 76, 60, 0.5)), url("../assets/img/stats.jpg");
+  background-image: linear-gradient(to bottom right, rgba(231, 76, 60, 1), rgba(231, 76, 60, 0.5)),
+    url("../assets/img/stats.jpg");
 }
 
 .flex-container-count {
@@ -769,10 +778,12 @@ h2::first-letter {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  background-image: linear-gradient(to bottom right, rgba(241, 196, 15, 1.0), rgba(241, 196, 15, 0.8)), url("../assets/img/mail.jpg");
+  background-image: linear-gradient(to bottom right, rgba(241, 196, 15, 1), rgba(241, 196, 15, 0.8)),
+    url("../assets/img/mail.jpg");
 }
 
-.flex-box-contacto, .flex-box-contacto-b {
+.flex-box-contacto,
+.flex-box-contacto-b {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -786,7 +797,7 @@ h2::first-letter {
   margin-bottom: 10px;
   justify-content: center;
   flex-direction: column;
-  background-color: rgba(255, 255, 255, 0.150);
+  background-color: rgba(255, 255, 255, 0.15);
 }
 
 .flex-box-contacto-b {
@@ -799,21 +810,24 @@ h2::first-letter {
 
 /* Mobile and iPad Portrait */
 @media only screen and (max-width: 959px) {
-  .flex-box-contacto, .flex-box-contacto-b {
+  .flex-box-contacto,
+  .flex-box-contacto-b {
     width: 100vw;
   }
 }
 
 /* Mobile Landscape and Portrait */
 @media only screen and (max-width: 767px) {
-  .flex-box-contacto, .flex-box-contacto-b {
+  .flex-box-contacto,
+  .flex-box-contacto-b {
     width: 100vw;
   }
 }
 
 /* Mobile Portrait */
 @media only screen and (max-width: 479px) {
-  .flex-box-contacto, .flex-box-contacto-b {
+  .flex-box-contacto,
+  .flex-box-contacto-b {
     width: 100vw;
   }
 }
@@ -862,7 +876,10 @@ label {
   font-family: "RalewayRegular";
 }
 
-input[type=text], select, input[type=email], textarea {
+input[type="text"],
+select,
+input[type="email"],
+textarea {
   color: white;
   width: 90%;
   height: auto;
@@ -885,14 +902,18 @@ select option {
   border: none;
 }
 
-input[type=text]::placeholder, input[type=email]::placeholder, textarea[type=text]::placeholder {
+input[type="text"]::placeholder,
+input[type="email"]::placeholder,
+textarea[type="text"]::placeholder {
   /* Chrome, Firefox, Opera, Safari 10.1+ */
   color: rgba(236, 240, 241, 0.8);
   opacity: 1;
   /* Firefox */
 }
 
-input[type=text]:-ms-input-placeholder, input[type=email]:-ms-input-placeholder, textarea[type=text]:-ms-input-placeholder {
+input[type="text"]:-ms-input-placeholder,
+input[type="email"]:-ms-input-placeholder,
+textarea[type="text"]:-ms-input-placeholder {
   /* Chrome, Firefox, Opera, Safari 10.1+ */
   color: rgba(236, 240, 241, 0.8);
   opacity: 1;
@@ -900,7 +921,10 @@ input[type=text]:-ms-input-placeholder, input[type=email]:-ms-input-placeholder,
 }
 
 @media screen and (max-width: 345px) {
-  input[type=text], select, input[type=email], textarea {
+  input[type="text"],
+  select,
+  input[type="email"],
+  textarea {
     width: 90vw;
   }
 
@@ -918,18 +942,20 @@ select {
   overflow: hidden;
 }
 
-input[type=text]:focus, input[type=email]:focus, textarea:focus {
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
   background-color: rgba(241, 196, 15, 0.7);
 }
 
-input[type=submit] {
+input[type="submit"] {
   width: 90%;
   padding: 14px 20px;
   margin: 8px 0;
   border: none;
   border-radius: 4px;
   cursor: pointer;
-  background-color: rgba(255, 255, 255, 0.800);
+  background-color: rgba(255, 255, 255, 0.8);
   color: #f1c40f;
   font-size: 18px;
   font-family: "RalewayRegular";
@@ -937,12 +963,12 @@ input[type=submit] {
   transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
-input[type=submit]::after {
+input[type="submit"]::after {
   -webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
   transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
-input[type=submit]:hover {
+input[type="submit"]:hover {
   -webkit-transform: scale(1.02, 1.02);
   transform: scale(1.02, 1.02);
   background-color: #f1c40f;
@@ -950,12 +976,12 @@ input[type=submit]:hover {
   font-family: "RalewaySemiBold";
 }
 
-input[type=submit]:hover::after {
+input[type="submit"]:hover::after {
   opacity: 1;
 }
 
 @media screen and (max-width: 345px) {
-  input[type=submit] {
+  input[type="submit"] {
     width: 90vw;
   }
 }
@@ -985,7 +1011,8 @@ textarea {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  background-image: linear-gradient(to bottom right, rgba(231, 76, 60, 1.0), rgba(231, 76, 60, 0.8)), url("../assets/img/footer.jpg");
+  background-image: linear-gradient(to bottom right, rgba(231, 76, 60, 1), rgba(231, 76, 60, 0.8)),
+    url("../assets/img/footer.jpg");
 }
 
 .map-title {
@@ -1040,7 +1067,8 @@ textarea {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  background-image: linear-gradient(to bottom right, rgba(241, 196, 15, 0.7), rgba(231, 76, 60, 0.7)), url("../assets/img/footer.jpg");
+  background-image: linear-gradient(to bottom right, rgba(241, 196, 15, 0.7), rgba(231, 76, 60, 0.7)),
+    url("../assets/img/footer.jpg");
 }
 
 .footer-box-content {
