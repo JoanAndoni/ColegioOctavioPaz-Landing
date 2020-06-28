@@ -16,9 +16,6 @@
 
   <!-- SCRIPT JQUERY -->
   <script src="js/jquery.min.js"></script>
-
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-114667324-1"></script>
 </head>
 
 <body>
@@ -26,7 +23,7 @@
   <!-- NAVBAR -->
   <nav id="main-navbar">
     <div id="myTopnav" class="flex-container-nav">
-      <a href="#home" class="img"><img class="flex-img" src="assets/img/logo.png"></a>
+      <a href="#home" class="img"><img class="flex-img" src="assets/images/logo.png"></a>
       <div class="links">
         <a href="#nosotros"><span data-hover="Nosotros">Nosotros</span></a>
         <a href="#preescolar"><span data-hover="Preescolar">Preescolar</span></a>
@@ -41,10 +38,10 @@
 
   <nav id="responsive-navbar">
     <div id="responsiveBar" class="flex-container-nav">
-      <a onclick="responsiveNavbarFunction()"><img class="flex-img" src="assets/img/menu.png"></a>
+      <a onclick="responsiveNavbarFunction()"><img class="flex-img" src="assets/images/menu.svg"></a>
     </div>
     <div id="responsiveNavbar" class="flex-container-nav-responsive">
-      <a id="menu-bottom" onclick="responsiveNavbarFunction()"><img class="flex-img" src="assets/img/menu.png"></a>
+      <a id="menu-bottom" onclick="responsiveNavbarFunction()"><img class="flex-img" src="assets/images/menu.svg"></a>
       <a class="flex-item" href="#nosotros">Nosotros</a>
       <a class="flex-item" href="#preescolar">Preescolar</a>
       <a class="flex-item" href="#primaria">Primaria</a>
@@ -59,33 +56,35 @@
   <section id="home" class="header flex-container-header">
     <div class="title">
       <h1 id="tituloColegio">Colegio Hispano Americano Octavio Paz</h1>
-      <p id="textoTitulo">Aqui esta este pedo</p>
+      <p id="textoTitulo">La mejor educación humanista para tus hijos</p>
     </div>
   </section>
 
   <!-- NOSOTROS -->
   <section id="nosotros" class="flex-container-nosotros">
-    <div class="flex-container-nosotros-arriba">
+    <div class="flex-container-nosotros-card left">
       <h2 class="title-nosotros">Misión</h2>
-      <p class="text-nosotros-a">
+      <p class="text-nosotros">
         La formación del alumno como ser humano con la plena conciencia de su capacidades, para el bien ser y el
         bienestar, mediante el desarrollo de la inteligencia, la afectividad y el cuerpo, extraer la grandeza que se
         encuentra dentro de
         cada persona enriquecido y profundizando la relación hacia el mismo, la familia y la comunidad, viviendo y
         fortaleciendo los valores
-        humanos como son la paz, armonía, cooperación, honestidad, justicia, igualdad, comprensión, respeto, libertad,
+        humanos como son la paz, armonía, cooperación, honestidad, justicia, igualdad, comprensión, respeto,
+        libertad,
         responsabilidad y amor
         a través de la implementación y así obtener su desarrollo integral.
       </p>
     </div>
 
-    <div class="flex-container-nosotros-abajo">
+    <div class="flex-container-nosotros-card right">
       <h2 class="title-nosotros">Visión</h2>
-      <p class="text-nosotros-b">
+      <p class="text-nosotros">
         Anhelamos ser una institución que esté a la vanguardia, cuyo compromiso sea ver al alumno como protagonista
         de su formación presente, bajo un marco de solidaridad y cooperación, una escuela para contribuir con la
         comunidad a la formación de
-        alumnos con carácter humanista donde sean capaces de practicar la reflexión, comprensión, comportamiento crítico
+        alumnos con carácter humanista donde sean capaces de practicar la reflexión, comprensión, comportamiento
+        crítico
         y respuesta creativas
         ante un mundo en adopción de modelos económicos que tienden a modificarnos como sociedad, en la que nuestros
         alumnos asumirán un papel
@@ -97,485 +96,75 @@
   </section>
 
   <!-- OFERTA -->
-  <div class="align_popup">
-    <div class="popupID">
-      <div class="popup-row">
-        <div class="popup-left">
-          <img
-            src="https://images.unsplash.com/photo-1484820540004-14229fe36ca4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80">
-        </div>
-        <div class="popup-right">
-          <a class="popup-close" onclick="closePopup()">
-            <ion-icon name="close-circle-outline"></ion-icon>
-          </a>
-          <div class="popup-texts">
-            <h1 id="titlePopup" class="popup-title">Lorem ipsum dolor sit amet</h1>
-            <p id="contentPopup" class="popup-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ex
-              velit, viverra non vulputate vitae, blandit vitae nisl. Nullam fermentum orci et erat viverra bibendum.
-              Aliquam sed varius
-              nibh, vitae mattis purus. Mauris elementum sapien non ullamcorper vulputate. Orci varius natoque penatibus
-              et magnis dis parturient montes, nascetur ridiculus mus. Sed eget felis sit amet eros viverra pulvinar.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <section>
-    <div id="preescolar" class="flex-container-oferta">
+  <section id="nivelesEducativos" *ngFor="let nivel of nivelesEducativos">
+    <div class="flex-container-oferta">
       <div class="header-oferta">
-        <h2 class="oferta-h2">Preescolar</h2>
-        <h3 class="oferta-h3">C.C.T 15PJN5270O</h3>
-        <p class="oferta-p">
-          La finalidad de la educación es lograr que el niño aprenda de un ambiente que le produzca
-          felicidad; no hay aprendizaje que valga si desanima o roba la alegría, la educación debe
-          ayudar al niño a solucionar problemas que se le presentan al contacto con su medio fisico y social.
-        </p>
+        <h2 class="oferta-h2">{{nivel.nombre}}</h2>
+        <h3 class="oferta-h3">C.C.T {{nivel.cct}}</h3>
+        <p class="oferta-p">{{nivel.descripcion}}</p>
       </div>
       <div class="materias-container">
-        <div class="oferta-materia" onclick="popup(0, 0, 1, 0)">
-          <p>
-            <ion-icon class="icon-size" name="book"></ion-icon><br>Programa oficial de la S.E.P.
-          </p>
+        <div id="left" class="moveArrows">
+          <img class="flex-img-arrow" src="assets/images/chevron-back-outline.svg">
         </div>
-
-        <div class="oferta-materia" onclick="popup(0, 0, 1, 1)">
-          <p>
-            <ion-icon class="icon-size" name="color-palette"></ion-icon><br>Artes
-          </p>
+        <div class="cards">
+          <div class="space-for-arrows"></div>
+          <div *ngFor="let materia of nivel.oferta; let i = index" class="card-materia" (click)="displayInfo(materia)">
+            <div class="click">
+              <div class="click2">
+                <div class="click3">
+                  <img src="assets/images/open-outline-black.svg" alt="">
+                </div>
+              </div>
+            </div>
+            <h2>{{materia.name}}</h2>
+          </div>
+          <div class="space-for-arrows"></div>
         </div>
-
-        <div class="oferta-materia" onclick="popup(0, 0, 1, 2)">
-          <p>
-            <ion-icon class="icon-size" name="chatbubbles"></ion-icon><br>Lenguaje y comunicación
-          </p>
-        </div>
-
-        <div class="oferta-materia" onclick="popup(0, 0, 1, 3)">
-          <p>
-            <ion-icon class="icon-size" name="calculator"></ion-icon><br>Lógico matemáticas
-          </p>
-        </div>
-
-        <div class="oferta-materia" onclick="popup(0, 0, 1, 4)">
-          <p>
-            <ion-icon class="icon-size" name="nuclear"></ion-icon><br>Ciencias
-          </p>
-        </div>
-
-        <div class="oferta-materia" onclick="popup(0, 0, 1, 5)">
-          <p>
-            <ion-icon class="icon-size" name="walk"></ion-icon><br>Psicomotricidad
-          </p>
-        </div>
-
-        <div class="oferta-materia" onclick="popup(0, 0, 1, 6)">
-          <p>
-            <ion-icon class="icon-size" name="mail"></ion-icon><br>Lectura y escritura
-          </p>
-        </div>
-
-        <div class="oferta-materia" onclick="popup(0, 0, 1, 7)">
-          <p>
-            <ion-icon class="icon-size" name="globe"></ion-icon><br>Inglés
-          </p>
-        </div>
-
-        <div class="oferta-materia" onclick="popup(0, 0, 1, 8)">
-          <p>
-            <ion-icon class="icon-size" name="desktop"></ion-icon><br>Computación
-          </p>
-        </div>
-
-        <div class="oferta-materia" onclick="popup(0, 0, 1, 9)">
-          <p>
-            <ion-icon class="icon-size" name="water"></ion-icon><br>Natación<br>
-            <span>
-              Servicio no incluido en la colegiatura
-            </span>
-          </p>
-        </div>
-
-        <div class="oferta-materia" onclick="popup(0, 0, 1, 10)">
-          <p>
-            <ion-icon class="icon-size" name="football"></ion-icon><br>Juegos infantiles
-          </p>
-        </div>
-
-        <div class="oferta-materia" onclick="popup(0, 0, 1, 11)">
-          <p>
-            <ion-icon class="icon-size" name="bus"></ion-icon><br>Transporte escolar (Opcional)
-          </p>
+        <div id="right" class="moveArrows">
+          <img class="flex-img-arrow" src="assets/images/chevron-forward-outline.svg">
         </div>
       </div>
     </div>
-
-    <div id="stats" class="flex-container-count">
-
-      <div class="box-count">
-
-        <div class="count-element">
-
-          <div class="count-text">
-            <ion-icon name="chatbubbles"></ion-icon>
-            <h3><span class="counter">34</span> +</h3>
-            <p>Platicas de profesionales</p>
-          </div>
-        </div>
-
-        <div class="count-element">
-
-          <div class="count-text">
-            <ion-icon name="flask"></ion-icon>
-            <h3><span class="counter">12</span> +</h3>
-            <p>Proyectos de ciencias anuales</p>
-          </div>
-        </div>
-
-        <div class="count-element">
-
-          <div class="count-text">
-            <ion-icon name="book"></ion-icon>
-            <h3><span class="counter">30</span> +</h3>
-            <p>Libros promedio leidos por niño</p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div id="primaria" class="flex-container-oferta">
-
-      <div class="header-oferta">
-        <h2 class="oferta-h2">Primaria</h2>
-        <h3 class="oferta-h3">C.C.T 15PPR3113A</h3>
-        <p class="oferta-p">
-          La formación deberá intentar el desarrollo equilibrado y completo del niño en las áreas cognoscitivo,
-          afectivo, fisiológica y del espíritu atendiendo a la personalidad individual en donde el docente se convertirá
-          en ayuda para que los alumnos
-          tengan iniciativas propias para el aprendizaje y que les permitan salir avantes al encontrarse con las leyes
-          de la vida social.
-        </p>
-      </div>
-
-      <div class="materias-container">
-
-        <div class="oferta-materia" onclick="popup(1, 0, 1, 0)">
-          <p>
-            <ion-icon class="icon-size" name="book"></ion-icon><br>Programa oficial de la S.E.P.
-          </p>
-        </div>
-
-        <div class="oferta-materia" onclick="popup(1, 0, 1, 1)">
-          <p>
-            <ion-icon class="icon-size" name="construct"></ion-icon><br>Talleres
-          </p>
-        </div>
-
-        <div class="oferta-materia" onclick="popup(1, 0, 1, 2)">
-          <p>
-            <ion-icon class="icon-size" name="chatbubbles"></ion-icon><br>Lenguaje y comunicación
-          </p>
-        </div>
-
-        <div class="oferta-materia" onclick="popup(1, 0, 1, 3)">
-          <p>
-            <ion-icon class="icon-size" name="calculator"></ion-icon><br>Álgebra
-          </p>
-        </div>
-
-        <div class="oferta-materia" onclick="popup(1, 0, 1, 4)">
-          <p>
-            <ion-icon class="icon-size" name="water"></ion-icon><br>Natación
-          </p>
-        </div>
-
-        <div class="oferta-materia" onclick="popup(1, 0, 1, 5)">
-          <p>
-            <ion-icon class="icon-size" name="globe"></ion-icon><br>Inglés
-          </p>
-        </div>
-
-        <div class="oferta-materia" onclick="popup(1, 0, 1, 6)">
-          <p>
-            <ion-icon class="icon-size" name="musical-notes"></ion-icon><br>Música
-          </p>
-        </div>
-
-        <div class="oferta-materia" onclick="popup(1, 0, 1, 7)">
-          <p>
-            <ion-icon class="icon-size" name="desktop"></ion-icon><br>Computación
-          </p>
-        </div>
-
-        <div class="oferta-materia" onclick="popup(1, 0, 1, 8)">
-          <p>
-            <ion-icon class="icon-size" name="bus"></ion-icon><br>Transporte escolar (Opcional)
-          </p>
-        </div>
-      </div>
-
-    </div>
-
-    <div id="stats" class="flex-container-count">
-
-      <div class="box-count">
-
-        <div class="count-element">
-
-          <div class="count-text">
-            <ion-icon name="chatbubbles"></ion-icon>
-            <h3><span class="counter">34</span> +</h3>
-            <p>Platicas de profesionales</p>
-          </div>
-        </div>
-
-        <div class="count-element">
-
-          <div class="count-text">
-            <ion-icon name="flask"></ion-icon>
-            <h3><span class="counter">12</span> +</h3>
-            <p>Proyectos de ciencias anuales</p>
-          </div>
-        </div>
-
-        <div class="count-element">
-
-          <div class="count-text">
-            <ion-icon name="book"></ion-icon>
-            <h3><span class="counter">30</span> +</h3>
-            <p>Libros promedio leidos por niño</p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div id="secundaria" class="flex-container-oferta">
-
-      <div class="header-oferta">
-        <h2 class="oferta-h2">Secundaria</h2>
-        <h3 class="oferta-h3">C.C.T 15PES0920B</h3>
-        <p class="oferta-p">
-
-        </p>
-      </div>
-
-      <div class="materias-container">
-
-        <div class="oferta-materia" onclick="popup(2, 0, 1, 0)">
-          <p>
-            <ion-icon class="icon-size" name="book"></ion-icon><br>Programa oficial de la S.E.P.
-          </p>
-        </div>
-
-        <div class="oferta-materia" onclick="popup(2, 0, 1, 1)">
-          <p>
-            <ion-icon class="icon-size" name="construct"></ion-icon><br>Talleres
-          </p>
-        </div>
-
-        <div class="oferta-materia" onclick="popup(2, 0, 1, 2)">
-          <p>
-            <ion-icon class="icon-size" name="chatbubbles"></ion-icon><br>Lenguaje y comunicación
-          </p>
-        </div>
-
-        <div class="oferta-materia" onclick="popup(2, 0, 1, 3)">
-          <p>
-            <ion-icon class="icon-size" name="calculator"></ion-icon><br>Álgebra
-          </p>
-        </div>
-
-        <div class="oferta-materia" onclick="popup(2, 0, 1, 4)">
-          <p>
-            <ion-icon class="icon-size" name="water"></ion-icon><br>Natación
-          </p>
-        </div>
-
-        <div class="oferta-materia" onclick="popup(2, 0, 1, 5)">
-          <p>
-            <ion-icon class="icon-size" name="nuclear"></ion-icon><br>Laboratorio
-          </p>
-        </div>
-
-        <div class="oferta-materia" onclick="popup(2, 0, 1, 6)">
-          <p>
-            <ion-icon class="icon-size" name="logo-ionitron"></ion-icon><br>Robótica
-          </p>
-        </div>
-
-        <div class="oferta-materia" onclick="popup(2, 0, 1, 7)">
-          <p>
-            <ion-icon class="icon-size" name="globe"></ion-icon><br>Inglés
-          </p>
-        </div>
-
-        <div class="oferta-materia" onclick="popup(2, 0, 1, 8)">
-          <p>
-            <ion-icon class="icon-size" name="musical-notes"></ion-icon><br>Música
-          </p>
-        </div>
-
-        <div class="oferta-materia" onclick="popup(2, 0, 1, 9)">
-          <p>
-            <ion-icon class="icon-size" name="desktop"></ion-icon><br>Computación
-          </p>
-        </div>
-
-        <div class="oferta-materia" onclick="popup(2, 0, 1, 10)">
-          <p>
-            <ion-icon class="icon-size" name="bus"></ion-icon><br>Transporte escolar (Opcional)
-          </p>
-        </div>
-      </div>
-
-    </div>
-
-    <div id="stats" class="flex-container-count">
-
-      <div class="box-count">
-
-        <div class="count-element">
-
-          <div class="count-text">
-            <ion-icon name="chatbubbles"></ion-icon>
-            <h3><span class="counter">34</span> +</h3>
-            <p>Platicas de profesionales</p>
-          </div>
-        </div>
-
-        <div class="count-element">
-
-          <div class="count-text">
-            <ion-icon name="flask"></ion-icon>
-            <h3><span class="counter">12</span> +</h3>
-            <p>Proyectos de ciencias anuales</p>
-          </div>
-        </div>
-
-        <div class="count-element">
-
-          <div class="count-text">
-            <ion-icon name="book"></ion-icon>
-            <h3><span class="counter">30</span> +</h3>
-            <p>Libros promedio leidos por niño</p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-  </section>
-
-  <!-- CONTACTO -->
-
-  <section id="contacto" class="flex-container-contacto">
-
-    <div class="flex-box-contacto">
-
-      <div class="identation-text">
-        <h2 class="title-contacto">Contacto</h2>
-        <p class="text-highlighted">
-          Sé un Octavio Paz Student Excellence
-          <p class="text-contacto">
-            Preguntanos lo que deseés y con gusto te proporcionaremos la información que necesites para pertenecer a
-            esta gran institución educativa.
-          </p>
-      </div>
-    </div>
-
-    <div class="flex-box-contacto-b">
-      <form method="POST" action="https://formspree.io/chaop3_edu@hotmail.com">
-        <label for="fname">Nombre</label>
-        <br>
-        <input type="text" id="fname" name="firstname" placeholder="Nombre..">
-        <br>
-        <label for="femail">Correo</label>
-        <br>
-        <input type="email" id="femail" name="email" placeholder="Correo..">
-        <br>
-        <label for="fnivel">Nivel escolar</label>
-        <br>
-        <select id="fnivel" name="nivel">
-          <option value="general"></option>
-          <option value="preescolar">Preescolar</option>
-          <option value="primaria">Primaria</option>
-          <option value="secundaria">Secundaria</option>
-        </select>
-        <br>
-        <label for="fmensaje">Mensaje</label><br>
-        <textarea type="text" id="fmensaje" name="comment" rows="4" cols="50" placeholder="Mensaje.."></textarea>
-        <br>
-        <input type="submit" value="Enviar">
-      </form>
-    </div>
-  </section>
-
-  <!-- UBICACIÓN -->
-
-  <section id="ubicacion" class="flex-container-map">
-    <h2 class="map-title">Ubicación</h2>
-    <p class="map-direccion">
-      Av. de las Torres no.16, San Lorenzo, Chimalhuacán, Estado de México, México.
-    </p>
-
-    <div id="map"></div>
   </section>
 
   <!-- FOOTER -->
-
   <div class="flex-container-footer">
-
     <div class="footer-box-content">
-
       <div class="footer-header">
-        <img class="footer-logo" src="assets/img/logo.png">
-        <p style="font-family:RalewaySemiBold; font-size:20px">"Educación Humanista para la Libertad del Ser"<br></p>
-        <p>Sientete libre de contactarnos, con gusto te atenderemos y responderemos todas tus respuestas. <br></p>
-        <p style="font-family:RalewayRegular; font-size:20px">+52 1 58 51 68 39</p>
+        <img class="footer-logo" src="assets/images/logo.png">
+        <p style="font-weight:700; font-size:20px;">"Educación Humanista para la Libertad del Ser"</p>
+        <p style="margin: 5px 0;">Sientete libre de contactarnos, con gusto te atenderemos y responderemos todas
+          tus respuestas.</p>
+        <p style="font-weight:400; font-size:20px;">+52 1 58 51 68 39</p>
       </div>
 
       <div class="footer-socials">
-
         <div class="social"><a target="_blank" href="https://www.facebook.com/hispanoamericanooctaviopaz/">
-            <ion-icon name="logo-facebook"></ion-icon>
+            <img class="icon" src="assets/images/logo-facebook.svg">
           </a></div>
-
         <div class="social"><a target="_blank" href="https://twitter.com/ColOctavioPaz">
-            <ion-icon name="logo-twitter"></ion-icon>
+            <img class="icon" src="assets/images/logo-twitter.svg">
           </a></div>
-
         <div class="social"><a target="_blank" href="https://www.instagram.com/colegiooctaviopaz/">
-            <ion-icon name="logo-instagram"></ion-icon>
+            <img class="icon" src="assets/images/logo-instagram.svg">
           </a></div>
-
-        <div class="social"><a target="_blank" href="mailto:chaop3_edu@hotmail.com?subject=Información">
-            <ion-icon name="mail"></ion-icon>
+        <div class="social"><a target="_blank" href="mailto:admin@colegiooctaviopaz.com?subject=Información">
+            <img class="icon" src="assets/images/mail-outline.svg">
           </a></div>
-
         <div class="social"><a href="tel:+5258516839">
-            <ion-icon name="call"></ion-icon>
+            <img class="icon" src="assets/images/call-outline.svg">
           </a></div>
       </div>
     </div>
 
     <div class="box-copyright">
-      <span>© 2019 <a href="#home">Colegio Hispano Americano Octavio Paz</a>, All Rights Reserved.</span>
+      <span>© 2020 <a style="cursor: not-allowed;">Colegio Hispano Americano Octavio Paz</a>, All
+        Rights Reserved.</span>
     </div>
   </div>
 
-  <!-- IMPORT OF THE ICONS -->
-  <script src="https://unpkg.com/ionicons@4.4.2/dist/ionicons.js"></script>
-
-  <!-- IMPORT FOR THE COUNTER -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
-  <script src="js/counterUp/jquery.counterup.min.js"></script>
-
-  <!-- IMPORT OF THE SHUFFLE LETTERS -->
-  <script src="js/shuffleLetters/jquery.shuffleLetters.js"></script>
-
-  <!-- SCRIPT FOR USE THE MAP-->
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBZmfWWgr8jksWlIJSoZOs4JNn-G8cf68U&callback=initMap"
-    async defer></script>
+  <!-- <app-info *ngIf="showInfo" [subject]="subject" (closeModal)="closeModal($event)"></app-info> -->
 
   <!-- IMPORT OF THE JS -->
   <script type="text/javascript" src="js/animation.js"></script>
