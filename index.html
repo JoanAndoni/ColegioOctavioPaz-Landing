@@ -11,49 +11,50 @@
 
   <!--NORMALIZATION-->
   <link rel="shortcut icon" type="image/png" href="favicon.ico" />
-  <link rel="stylesheet" type="text/css" href="css/SuperResete.css">
-  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" type="text/css" href="styles/SuperResete.css">
+  <link rel="stylesheet" type="text/css" href="styles/style.css">
 
   <!-- SCRIPT JQUERY -->
   <script src="js/jquery.min.js"></script>
 </head>
 
 <body>
-
-  <!-- NAVBAR -->
   <nav id="main-navbar">
-    <div id="myTopnav" class="flex-container-nav">
-      <a href="#home" class="img"><img class="flex-img" src="assets/images/logo.png"></a>
+    <div class="flex-container-nav">
+      <a href="#"><img class="nav-img" src="assets/images/logo.png"></a>
       <div class="links">
         <a href="#nosotros"><span data-hover="Nosotros">Nosotros</span></a>
-        <a href="#preescolar"><span data-hover="Preescolar">Preescolar</span></a>
-        <a href="#primaria"><span data-hover="Primaria">Primaria</span></a>
-        <a href="#secundaria"><span data-hover="Secundaria">Secundaria</span></a>
-        <a href="#contacto"><span data-hover="Contacto">Contacto</span></a>
-        <a href="#ubicacion"><span data-hover="Ubicación">Ubicación</span></a>
+        <a href="#inscripciones"><span data-hover="Inscripciones">Inscripciones</span></a>
       </div>
-      <a href="https://octaviopaz.herokuapp.com/" class="btn-login">Ingresar</a>
+      <a href="https://www.colegiooctaviopaz.com/login" class="btn-login">Iniciar sesión</a>
     </div>
   </nav>
 
   <nav id="responsive-navbar">
     <div id="responsiveBar" class="flex-container-nav">
-      <a onclick="responsiveNavbarFunction()"><img class="flex-img" src="assets/images/menu.svg"></a>
+      <a href="#"><img class="nav-img" src="assets/images/logo.png"></a>
+      <a onclick="responsiveNavbarFunction()">
+        <img class="flex-img-burguer" src="assets/images/menu.svg">
+      </a>
     </div>
-    <div id="responsiveNavbar" class="flex-container-nav-responsive">
-      <a id="menu-bottom" onclick="responsiveNavbarFunction()"><img class="flex-img" src="assets/images/menu.svg"></a>
-      <a class="flex-item" href="#nosotros">Nosotros</a>
-      <a class="flex-item" href="#preescolar">Preescolar</a>
-      <a class="flex-item" href="#primaria">Primaria</a>
-      <a class="flex-item" href="#secundaria">Secundaria</a>
-      <a class="flex-item" href="#contacto">Contacto</a>
-      <a class="flex-item" href="#ubicacion">Ubicación</a>
-      <a class="flex-item" href="https://octaviopaz.herokuapp.com/">Ingresar</a>
+
+    <div id="navbarBox">
+      <a id="menu-bottom" onclick="responsiveNavbarFunction()">
+        <img class="flex-img-burguer" src="assets/images/close-outline.svg">
+      </a>
+      <a class="logo" onclick="responsiveNavbarFunction()">
+        <img class="img" src="assets/images/logo.png">
+      </a>
+
+      <a class="flex-item" href="#nosotros" onclick="responsiveNavbarFunction()">Nosotros</a>
+      <a class="flex-item" href="#inscripciones" onclick="responsiveNavbarFunction()">Inscripciones</a>
+
+      <a href="https://www.colegiooctaviopaz.com/login" class="btn-login">Iniciar sesión</a>
     </div>
   </nav>
 
   <!-- HEADER -->
-  <section id="home" class="header flex-container-header">
+  <section id="home" class="header">
     <div class="title">
       <h1 id="tituloColegio">Colegio Hispano Americano Octavio Paz</h1>
       <p id="textoTitulo">La mejor educación humanista para tus hijos</p>
@@ -95,33 +96,70 @@
     </div>
   </section>
 
+  <!-- ADMISIÓN -->
+  <section id="inscripciones">
+
+  </section>
+
   <!-- OFERTA -->
   <section id="nivelesEducativos" *ngFor="let nivel of nivelesEducativos">
     <div class="flex-container-oferta">
       <div class="header-oferta">
-        <h2 class="oferta-h2">{{nivel.nombre}}</h2>
-        <h3 class="oferta-h3">C.C.T {{nivel.cct}}</h3>
-        <p class="oferta-p">{{nivel.descripcion}}</p>
+        <h2 class="oferta-h2">Preescolar</h2>
+        <h3 class="oferta-h3">C.C.T 15PJN5270O</h3>
+        <p class="oferta-p">La finalidad de la educación es lograr que el niño aprenda de un ambiente que le produzca
+          felicidad; no hay aprendizaje que valga si desanima o roba la alegría, la educación debe ayudar al niño a
+          solucionar problemas que se le presentan al contacto con su medio fisico y social.</p>
       </div>
       <div class="materias-container">
-        <div id="left" class="moveArrows">
+        <div id="left" class="moveArrows" onclick="cardScroll('cards-preescolar', 'left')">
           <img class="flex-img-arrow" src="assets/images/chevron-back-outline.svg">
         </div>
-        <div class="cards">
+        <div id="cards-preescolar" class="cards">
           <div class="space-for-arrows"></div>
-          <div *ngFor="let materia of nivel.oferta; let i = index" class="card-materia" (click)="displayInfo(materia)">
-            <div class="click">
-              <div class="click2">
-                <div class="click3">
-                  <img src="assets/images/open-outline-black.svg" alt="">
-                </div>
-              </div>
-            </div>
+          <div class="card-materia">
+            <p>{{materia.content}}</p>
+            <h2>{{materia.name}}</h2>
+          </div>
+          <div class="card-materia">
+            <p>{{materia.content}}</p>
+            <h2>{{materia.name}}</h2>
+          </div>
+          <div class="card-materia">
+            <p>{{materia.content}}</p>
+            <h2>{{materia.name}}</h2>
+          </div>
+          <div class="card-materia">
+            <p>{{materia.content}}</p>
+            <h2>{{materia.name}}</h2>
+          </div>
+          <div class="card-materia">
+            <p>{{materia.content}}</p>
+            <h2>{{materia.name}}</h2>
+          </div>
+          <div class="card-materia">
+            <p>{{materia.content}}</p>
+            <h2>{{materia.name}}</h2>
+          </div>
+          <div class="card-materia">
+            <p>{{materia.content}}</p>
+            <h2>{{materia.name}}</h2>
+          </div>
+          <div class="card-materia">
+            <p>{{materia.content}}</p>
+            <h2>{{materia.name}}</h2>
+          </div>
+          <div class="card-materia">
+            <p>{{materia.content}}</p>
+            <h2>{{materia.name}}</h2>
+          </div>
+          <div class="card-materia">
+            <p>{{materia.content}}</p>
             <h2>{{materia.name}}</h2>
           </div>
           <div class="space-for-arrows"></div>
         </div>
-        <div id="right" class="moveArrows">
+        <div id="right" class="moveArrows" onclick="cardScroll('cards-preescolar', 'right')">
           <img class="flex-img-arrow" src="assets/images/chevron-forward-outline.svg">
         </div>
       </div>
@@ -159,12 +197,9 @@
     </div>
 
     <div class="box-copyright">
-      <span>© 2020 <a style="cursor: not-allowed;">Colegio Hispano Americano Octavio Paz</a>, All
-        Rights Reserved.</span>
+      <span>© 2020 <a>Colegio Hispano Americano Octavio Paz</a></span>
     </div>
   </div>
-
-  <!-- <app-info *ngIf="showInfo" [subject]="subject" (closeModal)="closeModal($event)"></app-info> -->
 
   <!-- IMPORT OF THE JS -->
   <script type="text/javascript" src="js/animation.js"></script>

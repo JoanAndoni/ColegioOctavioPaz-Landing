@@ -1,5 +1,5 @@
 // FUNCION PARA SACAR EL MENU RESPOSIVO CON BOTON
-async function responsiveNavbarFunction() {
+function responsiveNavbarFunction() {
   if (document.getElementById("navbarBox").style.opacity === "1") {
     // console.log('Close Box');
     document.getElementById("navbarBox").style.opacity = "0";
@@ -23,3 +23,10 @@ $(window).on('scroll', function () {
     $('.flex-container-nav').removeClass('black');
   }
 });
+
+// FUNCION TO SCROLL
+function cardScroll(idCard, direction) {
+  var cards = document.getElementById(idCard);
+  const movement = (Math.floor(cards.offsetWidth / 250) * 250);
+  direction === 'left' ? cards.scrollLeft -= movement : cards.scrollLeft += movement;
+}
