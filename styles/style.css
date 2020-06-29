@@ -421,14 +421,14 @@
         cursor: pointer; }
     .flex-container-oferta .materias-container #left {
       left: 0; }
-      .flex-container-oferta .materias-container #left:hover {
+      .flex-container-oferta .materias-container #left:hover, .flex-container-oferta .materias-container #left:active {
         background: #ffe15942;
         background: -webkit-linear-gradient(to right, #ffe15942, #ffe1591e, #ffe15900);
         background: -moz-linear-gradient(to right, #ffe15942, #ffe1591e, #ffe15900);
         background: linear-gradient(to right, #ffe15942, #ffe1591e, #ffe15900); }
     .flex-container-oferta .materias-container #right {
       right: 0; }
-      .flex-container-oferta .materias-container #right:hover {
+      .flex-container-oferta .materias-container #right:hover, .flex-container-oferta .materias-container #right:active {
         background: #ffe15942;
         background: -webkit-linear-gradient(to left, #ffe15942, #ffe1591e, #ffe15900);
         background: -moz-linear-gradient(to left, #ffe15942, #ffe1591e, #ffe15900);
@@ -489,13 +489,13 @@
         transition: all 0.5s ease; }
       .flex-container-oferta .materias-container .card-materia:nth-child(2n + 1) {
         background-image: linear-gradient(to bottom, rgba(206, 206, 206, 0.3), rgba(206, 206, 206, 0.5)), url(https://images.unsplash.com/photo-1424115087662-5845efc6b366?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80); }
-      .flex-container-oferta .materias-container .card-materia:hover {
+      .flex-container-oferta .materias-container .card-materia:hover, .flex-container-oferta .materias-container .card-materia:active {
         height: 70vh;
         min-width: 300px;
         background-image: linear-gradient(to bottom, rgba(206, 206, 206, 0), rgba(206, 206, 206, 0.3)), url(../assets/images/whiteBackground.jpg); }
-        .flex-container-oferta .materias-container .card-materia:hover:nth-child(2n + 1) {
+        .flex-container-oferta .materias-container .card-materia:hover:nth-child(2n + 1), .flex-container-oferta .materias-container .card-materia:active:nth-child(2n + 1) {
           background-image: linear-gradient(to bottom, rgba(206, 206, 206, 0), rgba(206, 206, 206, 0.3)), url(https://images.unsplash.com/photo-1424115087662-5845efc6b366?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80); }
-        .flex-container-oferta .materias-container .card-materia:hover h2 {
+        .flex-container-oferta .materias-container .card-materia:hover h2, .flex-container-oferta .materias-container .card-materia:active h2 {
           font-size: 25px; }
   @media only screen and (max-width: 767px) {
     .flex-container-oferta .header-oferta {
