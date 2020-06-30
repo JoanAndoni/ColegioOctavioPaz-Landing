@@ -93,7 +93,7 @@
       cursor: pointer;
       color: white;
       text-align: center;
-      font-size: 28.8px;
+      font-size: 29px;
       font-family: "Raleway";
       font-weight: 600;
       text-transform: uppercase;
@@ -221,7 +221,7 @@
       text-shadow: 0px 0px 8px rgba(0, 0, 0, 0.5);
       font-family: "Raleway";
       font-weight: 400;
-      font-size: 28.8px;
+      font-size: 29px;
       margin-top: 10px; }
     @media only screen and (max-width: 950px) {
       .header .title #tituloColegio {
@@ -315,7 +315,7 @@
           display: initial; }
     @media only screen and (max-width: 479px) {
       .flex-container-nosotros .flex-container-nosotros-card .title-nosotros {
-        font-size: 28.8px; }
+        font-size: 35px; }
       .flex-container-nosotros .flex-container-nosotros-card .text-nosotros {
         font-size: 14px; } }
 
@@ -350,7 +350,7 @@
       padding: 18px 0;
       text-align: center;
       height: auto;
-      width: 70vw; }
+      width: 70%; }
       #nivelesEducativos .flex-container-oferta .header-oferta .oferta-h2 {
         color: #f1c40f;
         font-family: "Raleway";
@@ -366,10 +366,11 @@
         text-align: center; }
       #nivelesEducativos .flex-container-oferta .header-oferta .oferta-h3 {
         font-weight: 700;
-        font-size: 28.8px;
+        font-size: 29px;
         margin-bottom: 11.25px; }
       #nivelesEducativos .flex-container-oferta .header-oferta .oferta-p {
         font-weight: 400;
+        line-height: 135%;
         font-size: 18px; }
     #nivelesEducativos .flex-container-oferta .materias-container {
       display: -webkit-box;
@@ -463,7 +464,7 @@
         #nivelesEducativos .flex-container-oferta .materias-container .card-materia h2 {
           font-family: "Raleway";
           font-weight: 700;
-          font-size: 28.8px;
+          font-size: 29px;
           color: #fff;
           text-align: center;
           transition: all 0.5s ease; }
@@ -490,19 +491,19 @@
           #nivelesEducativos .flex-container-oferta .materias-container .card-materia:hover h2, #nivelesEducativos .flex-container-oferta .materias-container .card-materia:active h2, #nivelesEducativos .flex-container-oferta .materias-container .card-materia:focus h2 {
             font-size: 32px; }
     @media only screen and (max-width: 640px) {
+      #nivelesEducativos .flex-container-oferta .header-oferta {
+        width: 90%; }
       #nivelesEducativos .flex-container-oferta .materias-container .cards {
         width: 95%; }
       #nivelesEducativos .flex-container-oferta .materias-container .moveArrows {
         display: none; } }
     @media only screen and (max-width: 479px) {
-      #nivelesEducativos .flex-container-oferta .header-oferta {
-        width: 90%; }
-        #nivelesEducativos .flex-container-oferta .header-oferta .oferta-h2 {
-          font-size: 28.8px; }
-        #nivelesEducativos .flex-container-oferta .header-oferta .oferta-h3 {
-          font-size: 18px; }
-        #nivelesEducativos .flex-container-oferta .header-oferta .oferta-p {
-          font-size: 14px; } }
+      #nivelesEducativos .flex-container-oferta .header-oferta .oferta-h2 {
+        font-size: 35px; }
+      #nivelesEducativos .flex-container-oferta .header-oferta .oferta-h3 {
+        font-size: 22px; }
+      #nivelesEducativos .flex-container-oferta .header-oferta .oferta-p {
+        font-size: 14px; } }
 
 #popup {
   display: -webkit-box;
@@ -561,6 +562,7 @@
       font-weight: 400;
       font-size: 18px;
       text-align: justify;
+      line-height: 135%;
       color: #fff; }
   @media only screen and (max-width: 900px) {
     #popup {
@@ -571,8 +573,11 @@
         margin: 55px 0 20px 0; }
         #popup #info-materia #imagen-materia {
           height: auto;
-          width: 100%;
+          width: 75%;
           margin: 0; } }
+  @media only screen and (max-width: 479px) {
+    #popup #info-materia #imagen-materia {
+      width: 100%; } }
 
 /*------------Online-------------*/
 .flex-container-online {
@@ -632,6 +637,7 @@
         font-size: 18px;
         color: #191919;
         font-weight: 400;
+        line-height: 135%;
         text-align: justify; }
     .flex-container-online .divider .online-logos {
       display: -webkit-box;
@@ -659,7 +665,7 @@
           text-align: center; } }
   @media only screen and (max-width: 479px) {
     .flex-container-online .divider .header-text .tittle {
-      font-size: 28.8px; }
+      font-size: 29px; }
     .flex-container-online .divider .header-text .text {
       font-size: 14px; } }
 
@@ -701,8 +707,9 @@
       font-weight: 900;
       margin-bottom: 11.25px; }
     .flex-container-inscripciones .header-text .subtitle {
-      font-size: 28.8px;
+      font-size: 29px;
       color: #191919;
+      line-height: 135%;
       font-weight: 600; }
   .flex-container-inscripciones .proceso {
     display: -webkit-box;
@@ -773,13 +780,14 @@
           color: white; }
           .flex-container-inscripciones .proceso .row .step .right p {
             font-family: "Raleway";
+            line-height: 135%;
             font-weight: 400;
             font-size: 18px; }
   @media only screen and (max-width: 479px) {
     .flex-container-inscripciones {
       padding: 0; }
       .flex-container-inscripciones .header-text .title {
-        font-size: 28.8px; }
+        font-size: 29px; }
       .flex-container-inscripciones .header-text .subtitle {
         font-size: 18px; }
       .flex-container-inscripciones .proceso .row .step {
@@ -837,7 +845,7 @@
         margin-bottom: 11.25px; }
       .flex-container-footer .footer-box-content .footer-header h2  {
         font-weight: 700;
-        font-size: 28.8px; }
+        font-size: 29px; }
       .flex-container-footer .footer-box-content .footer-header p {
         font-weight: 400;
         font-size: 18px; }
