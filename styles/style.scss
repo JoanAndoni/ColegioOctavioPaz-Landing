@@ -1,3 +1,13 @@
+$text-size-title: 65.5px;
+$text-size-h1: 41px;
+$text-size-h2: 25.6px;
+$text-size-p: 16px;
+$text-size-min: 13px;
+$color-yellow: #f1c40f;
+$color-darkgrey: rgb(25, 25, 25);
+$margin-title: 18px;
+$margin-subtitle: 11.25px;
+
 @font-face {
     font-family: "Raleway";
     src: url(../assets/fonts/Raleway-Light.ttf);
@@ -69,7 +79,7 @@
     text-transform: initial !important;
     font-family: "Raleway" !important;
     font-weight: 700;
-    font-size: 14px;
+    font-size: $text-size-p;
     transition: all 0.5s ease-out;
     cursor: pointer;
 
@@ -121,7 +131,7 @@
             cursor: pointer;
             color: white;
             text-align: center;
-            font-size: 25px;
+            font-size: $text-size-h2;
             font-family: "Raleway";
             font-weight: 600;
             text-transform: uppercase;
@@ -138,7 +148,7 @@
 
         .btn-login {
             margin-top: 10px !important;
-            font-size: 18px;
+            font-size: $text-size-p;
         }
     }
 }
@@ -152,6 +162,7 @@
     z-index: 100;
     background: transparent;
     transition: all 1.2s ease-out;
+    background: rgba(0, 0, 0, 0.1);
 
     &.black {
         background: rgba(0, 0, 0, 0.85);
@@ -167,7 +178,6 @@
 
     .links {
         display: flex;
-
         a {
             overflow: hidden;
             position: relative;
@@ -178,7 +188,7 @@
             text-decoration: none;
             text-transform: uppercase;
             font-family: "Raleway";
-            font-weight: 600;
+            font-weight: 700;
             text-align: center;
             overflow: hidden;
             height: auto;
@@ -187,7 +197,7 @@
         a span {
             text-align: center;
             cursor: pointer;
-            font-size: 18px;
+            font-size: $text-size-p;
             position: relative;
             display: inline-block;
             -webkit-transition: -webkit-transform 0.3s;
@@ -216,7 +226,7 @@
 }
 
 /* Mobile and iPad Portrait */
-@media only screen and (max-width: 1145px) {
+@media only screen and (max-width: 810px) {
     #main-navbar {
         display: none;
     }
@@ -235,24 +245,22 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../assets/images/pencils.jpg");
+    background-image: url("../assets/images/pencils.jpg");
 
     .title {
-        height: 40vh;
         width: 90%;
-        margin: 0;
+        height: fit-content;
         position: absolute;
-        top: 55%;
+        top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        padding: 0 20px;
 
         #tituloColegio {
             color: white;
-            text-shadow: 0px 2px 5px #7f8c8d;
+            text-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
             font-family: "Raleway";
-            font-weight: 400;
-            font-size: 50px;
+            font-weight: 700;
+            font-size: $text-size-title;
             text-transform: uppercase;
 
             &::first-letter {
@@ -262,32 +270,28 @@
 
         #textoTitulo {
             color: white;
-            text-shadow: 0px 2px 5px #7f8c8d;
+            text-shadow: 0px 0px 8px rgba(0, 0, 0, 0.5);
             font-family: "Raleway";
             font-weight: 400;
-            font-size: 25px;
+            font-size: $text-size-h2;
             margin-top: 10px;
         }
 
         /* Mobile and iPad Portrait */
-        @media only screen and (max-width: 959px) {
+        @media only screen and (max-width: 950px) {
             #tituloColegio {
-                font-size: 45px;
-            }
-
-            #textoTitulo {
-                font-size: 20px;
+                font-size: 55px;
             }
         }
 
         /* Mobile Landscape and Portrait */
         @media only screen and (max-width: 767px) {
             #tituloColegio {
-                font-size: 40px;
+                font-size: 45px;
             }
 
             #textoTitulo {
-                font-size: 17.5px;
+                font-size: $text-size-p;
             }
         }
 
@@ -295,10 +299,6 @@
         @media only screen and (max-width: 479px) {
             #tituloColegio {
                 font-size: 35px;
-            }
-
-            #textoTitulo {
-                font-size: 15px;
             }
         }
     }
@@ -310,7 +310,6 @@
     min-height: 70vh;
     height: auto;
     width: 100vw;
-    align-items: center;
     position: relative;
     background-position: center;
     background-repeat: no-repeat;
@@ -326,17 +325,18 @@
         z-index: 1;
 
         .title-nosotros {
-            font-size: 35px;
+            font-size: $text-size-h1;
             font-family: "Raleway";
             font-weight: 700;
             text-transform: uppercase;
+            margin-bottom: $margin-subtitle;
         }
 
         .text-nosotros {
             width: 80%;
             display: none;
             text-align: justify;
-            font-size: 15px;
+            font-size: $text-size-p;
             line-height: 135%;
             font-family: "Raleway";
             font-weight: 400;
@@ -388,259 +388,422 @@
             }
         }
 
-        @media only screen and (max-width: 767px) {
-            .title-nosotros {
-                font-family: "Raleway";
-                font-weight: 400;
-                font-size: 30px;
-            }
-
-            .text-nosotros {
-                font-size: 13px;
-            }
-        }
-
         @media only screen and (max-width: 479px) {
             .title-nosotros {
-                font-family: "Raleway";
-                font-weight: 400;
-                font-size: 30px;
+                font-size: $text-size-h2;
             }
 
             .text-nosotros {
-                font-size: 12px;
+                font-size: $text-size-min;
             }
         }
     }
 }
 
-/*------------Admisión-------------*/
-
 /*------------Oferta-------------*/
-
-.flex-container-oferta {
-    @include flexbox(column, flex-start, center);
-    width: 100%;
-    height: auto;
-    min-height: 100vh;
-    align-items: center;
-    padding: 10px 0;
-    background-color: #151515;
-
-    .header-oferta {
-        @include flexbox(column, center, center);
-        width: 70vw;
-        height: auto;
-        min-height: 30vh;
-        text-align: center;
-
-        .oferta-h2 {
-            color: #f1c40f;
-            font-family: "Raleway";
-            font-weight: 700;
-            font-size: 50px;
-            margin: 0;
-        }
-
-        .oferta-h3 {
-            margin: 5px 0;
-            font-family: "Raleway";
-            font-weight: 400;
-            text-align: center;
-            font-size: 20px;
-            color: white;
-        }
-
-        .oferta-p {
-            margin: 0;
-            font-family: "Raleway";
-            font-weight: 400;
-            font-size: 15px;
-            color: white;
-        }
-    }
-
-    .materias-container {
-        @include flexbox(row, center, center);
-        position: relative;
-        min-height: 70vh;
-        height: auto;
+#nivelesEducativos {
+    padding-top: 30px;
+    .flex-container-oferta {
+        @include flexbox(column, flex-start, center);
         width: 100%;
+        height: auto;
+        min-height: 100vh;
+        align-items: center;
+        padding: 10px 0;
 
-        .moveArrows {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 60vh;
-            min-width: 5%;
-            position: absolute;
-            cursor: pointer;
-
-            .flex-img-arrow {
-                @include noSelect();
-                width: 40px;
-                height: auto;
-                cursor: pointer;
-            }
-        }
-
-        #left {
-            left: 0;
-            &:hover,
-            &:active,
-            &:focus {
-                background: #ffe15942;
-                background: -webkit-linear-gradient(to right, #ffe15942, #ffe1591e, #ffe15900);
-                background: -moz-linear-gradient(to right, #ffe15942, #ffe1591e, #ffe15900);
-                background: linear-gradient(to right, #ffe15942, #ffe1591e, #ffe15900);
-            }
-        }
-
-        #right {
-            right: 0;
-            &:hover,
-            &:active,
-            &:focus {
-                background: #ffe15942;
-                background: -webkit-linear-gradient(to left, #ffe15942, #ffe1591e, #ffe15900);
-                background: -moz-linear-gradient(to left, #ffe15942, #ffe1591e, #ffe15900);
-                background: linear-gradient(to left, #ffe15942, #ffe1591e, #ffe15900);
-            }
-        }
-
-        .cards {
-            display: -webkit-box;
-            display: -moz-box;
-            display: -ms-flexbox;
-            display: -webkit-flex;
-            display: flex;
-            flex-direction: row;
-            justify-content: flex-start;
-            align-items: center;
-            width: 95%;
-            min-height: 75%;
+        .header-oferta {
+            @include flexbox(column, center, center);
+            padding: $margin-title 0;
+            text-align: center;
             height: auto;
-            transition: ease 2s all;
-            scroll-behavior: smooth;
-            overflow-x: scroll;
+            width: 70vw;
 
-            .space-for-arrows {
+            .oferta-h2 {
+                color: $color-yellow;
+                font-family: "Raleway";
+                font-weight: 900;
+                letter-spacing: 5px;
+                text-transform: uppercase;
+                font-size: $text-size-h1;
+                margin-bottom: $margin-subtitle;
+            }
+
+            .oferta-h3,
+            .oferta-p {
+                color: $color-darkgrey;
+                font-family: "Raleway";
+                text-align: center;
+            }
+
+            .oferta-h3 {
+                font-weight: 700;
+                font-size: $text-size-h2;
+                margin-bottom: $margin-subtitle;
+            }
+            .oferta-p {
+                font-weight: 400;
+                font-size: $text-size-p;
+            }
+        }
+
+        .materias-container {
+            @include flexbox(row, center, center);
+            position: relative;
+            min-height: 70vh;
+            height: auto;
+            width: 100%;
+
+            .moveArrows {
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                height: 70vh;
-                min-width: 2.5%;
+                height: 60vh;
+                min-width: 5%;
+                position: absolute;
+                cursor: pointer;
+
+                .flex-img-arrow {
+                    @include noSelect();
+                    width: 40px;
+                    height: auto;
+                    cursor: pointer;
+                }
+            }
+
+            #left {
+                left: 0;
+                &:hover,
+                &:active,
+                &:focus {
+                    background: #ffe15942;
+                    background: -webkit-linear-gradient(to right, #ffe15942, #ffe1591e, #ffe15900);
+                    background: -moz-linear-gradient(to right, #ffe15942, #ffe1591e, #ffe15900);
+                    background: linear-gradient(to right, #ffe15942, #ffe1591e, #ffe15900);
+                }
+            }
+
+            #right {
+                right: 0;
+                &:hover,
+                &:active,
+                &:focus {
+                    background: #ffe15942;
+                    background: -webkit-linear-gradient(to left, #ffe15942, #ffe1591e, #ffe15900);
+                    background: -moz-linear-gradient(to left, #ffe15942, #ffe1591e, #ffe15900);
+                    background: linear-gradient(to left, #ffe15942, #ffe1591e, #ffe15900);
+                }
+            }
+
+            .cards {
+                display: -webkit-box;
+                display: -moz-box;
+                display: -ms-flexbox;
+                display: -webkit-flex;
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-start;
+                align-items: center;
+                width: 95%;
+                min-height: 75%;
+                height: auto;
+                transition: ease 2s all;
+                scroll-behavior: smooth;
+                overflow-x: scroll;
+
+                .space-for-arrows {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    height: 70vh;
+                    min-width: 2.5%;
+                }
+            }
+
+            .card-materia {
+                @include flexbox(column, center, center);
+                cursor: pointer;
+                padding: 20px;
+                margin: 0 4px;
+                border-radius: 5px;
+                width: 250px;
+                min-width: 250px;
+                height: 60vh;
+
+                /* Transition */
+                -webkit-transition: 0.5s ease-out;
+                -moz-transition: 0.5s ease-out;
+                -o-transition: 0.5s ease-out;
+                transition: 0.5s ease-out;
+
+                h2 {
+                    font-family: "Raleway";
+                    font-weight: 700;
+                    font-size: $text-size-h2;
+                    color: #fff;
+                    text-align: center;
+                    transition: all 0.5s ease;
+                }
+
+                /* Background */
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-image: linear-gradient(rgba(#3592cf, 0.6), rgba(#3592cf, 0.8));
+                &:nth-child(5n + 3) {
+                    background-image: linear-gradient(rgba(#e83b65, 0.6), rgba(#e83b65, 0.8));
+                }
+                &:nth-child(5n + 4) {
+                    background-image: linear-gradient(rgba(#f3cc54, 0.6), rgba(#f3cc54, 0.8));
+                }
+                &:nth-child(5n + 5) {
+                    background-image: linear-gradient(rgba(#4fb69d, 0.6), rgba(#4fb69d, 0.8));
+                }
+                &:nth-child(5n + 6) {
+                    background-image: linear-gradient(rgba(#845199, 0.6), rgba(#845199, 0.8));
+                }
+
+                &:hover,
+                &:active,
+                &:focus {
+                    height: 70vh;
+                    min-width: 300px;
+                    background-image: linear-gradient(rgba(#3592cf, 0.6), rgba(#3592cf, 0.8));
+
+                    &:nth-child(5n + 3) {
+                        background-image: linear-gradient(rgba(#e83b65, 0.6), rgba(#e83b65, 0.8));
+                    }
+
+                    &:nth-child(5n + 4) {
+                        background-image: linear-gradient(rgba(#f3cc54, 0.6), rgba(#f3cc54, 0.8));
+                    }
+
+                    &:nth-child(5n + 5) {
+                        background-image: linear-gradient(rgba(#4fb69d, 0.6), rgba(#4fb69d, 0.8));
+                    }
+
+                    &:nth-child(5n + 6) {
+                        background-image: linear-gradient(rgba(#845199, 0.6), rgba(#845199, 0.8));
+                    }
+
+                    h2 {
+                        font-size: $text-size-h1;
+                    }
+                }
             }
         }
 
-        .card-materia {
-            @include flexbox(column, space-between, center);
-            cursor: pointer;
-            padding: 20px;
-            margin: 0 4px;
-            border-radius: 5px;
-            min-width: 250px;
-            height: 60vh;
+        @media only screen and (max-width: 479px) {
+            .header-oferta {
+                width: 90%;
 
-            /* Transition */
-            -webkit-transition: 0.5s ease-out;
-            -moz-transition: 0.5s ease-out;
-            -o-transition: 0.5s ease-out;
-            transition: 0.5s ease-out;
+                .oferta-h2 {
+                    font-size: $text-size-h2;
+                }
 
-            /* Background */
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-image: linear-gradient(to bottom, rgba(rgb(206, 206, 206), 0.3), rgba(rgb(206, 206, 206), 0.5)),
-                url(../assets/images/whiteBackground.jpg);
+                .oferta-h3 {
+                    font-size: $text-size-p;
+                }
 
-            h2 {
+                .oferta-p {
+                    font-size: $text-size-min;
+                }
+            }
+
+            .materias-container {
+                .moveArrows {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+/*------------Online-------------*/
+.flex-container-online {
+    @include flexbox(row, center, center);
+    min-height: 50vh;
+    height: auto;
+    width: 100vw;
+    padding: 30px 0;
+
+    .divider {
+        @include flexbox(column, center, center);
+        width: 45%;
+        height: 100%;
+        padding: 30px;
+
+        .online-colegio-img {
+            width: 100%;
+            height: auto;
+        }
+
+        .header-text {
+            @include flexbox(column, center, flex-start);
+            padding: $margin-title 0;
+            .tittle,
+            .text {
+                width: 100%;
                 font-family: "Raleway";
-                font-weight: 700;
-                font-size: 20px;
-                color: #000;
-                text-align: center;
-                transition: all 0.5s ease;
+                text-align: start;
             }
-
-            &:nth-child(2n + 1) {
-                background-image: linear-gradient(
-                        to bottom,
-                        rgba(rgb(206, 206, 206), 0.3),
-                        rgba(rgb(206, 206, 206), 0.5)
-                    ),
-                    url(https://images.unsplash.com/photo-1424115087662-5845efc6b366?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80);
+            .tittle {
+                text-transform: uppercase;
+                font-size: $text-size-h1;
+                color: $color-yellow;
+                font-weight: 900;
+                letter-spacing: 5px;
+                margin-bottom: $margin-subtitle;
             }
+            .text {
+                font-size: $text-size-p;
+                color: $color-darkgrey;
+                font-weight: 400;
+                text-align: justify;
+            }
+        }
 
-            &:hover,
-            &:active,
-            &:focus {
-                height: 70vh;
-                min-width: 300px;
-                background-image: linear-gradient(to bottom, rgba(rgb(206, 206, 206), 0), rgba(rgb(206, 206, 206), 0.3)),
-                    url(../assets/images/whiteBackground.jpg);
-
-                &:nth-child(2n + 1) {
-                    background-image: linear-gradient(
-                            to bottom,
-                            rgba(rgb(206, 206, 206), 0),
-                            rgba(rgb(206, 206, 206), 0.3)
-                        ),
-                        url(https://images.unsplash.com/photo-1424115087662-5845efc6b366?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80);
-                }
-
-                h2 {
-                    font-size: 25px;
-                }
+        .online-logos {
+            @include flexbox(row, space-around, center);
+            width: 90%;
+            height: auto;
+            img {
+                height: 40px;
+                width: auto;
+                margin: 5px;
             }
         }
     }
 
     @media only screen and (max-width: 767px) {
-        .header-oferta {
-            width: 85%;
+        flex-direction: column;
 
-            .oferta-h2 {
-                font-family: "Raleway";
-                font-weight: 400;
-                font-size: 30px;
-            }
-
-            .oferta-h3 {
-                font-size: 18px;
-            }
-
-            .oferta-p {
-                font-size: 13px;
+        .divider {
+            width: 90%;
+            padding: 10px;
+            .header-text {
+                .tittle {
+                    text-align: center;
+                }
             }
         }
     }
 
     @media only screen and (max-width: 479px) {
-        .header-oferta {
-            width: 95%;
+        .divider {
+            .header-text {
+                .tittle {
+                    font-size: $text-size-h2;
+                }
+                .text {
+                    font-size: $text-size-min;
+                }
+            }
+        }
+    }
+}
 
-            .oferta-h2 {
-                font-family: "Raleway";
-                font-weight: 400;
-                font-size: 30px;
+/*------------Inscipciones-------------*/
+.flex-container-inscripciones {
+    @include flexbox(column, center, center);
+    min-height: 50vh;
+    height: auto;
+    width: 100vw;
+    padding: 30px 50px;
+
+    .header-text {
+        @include flexbox(column, center, center);
+        padding: $margin-title 0;
+        .title,
+        .subtitle {
+            font-family: "Raleway";
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            text-align: center;
+        }
+        .title {
+            font-size: $text-size-h1;
+            color: $color-yellow;
+            font-weight: 900;
+            margin-bottom: $margin-subtitle;
+        }
+        .subtitle {
+            font-size: $text-size-h2;
+            color: $color-darkgrey;
+            font-weight: 600;
+        }
+    }
+
+    .proceso {
+        @include flexbox(column, center, center);
+        .row {
+            @include flexbox(row, space-around, center);
+            .step {
+                @include flexbox(row, center, center);
+                width: 300px;
+                height: 350px;
+                margin: 20px;
+                border-radius: 5px;
+                background-image: linear-gradient(rgba(#4eaa30, 0.6), rgba(#4eaa30, 0.8));
+
+                .left {
+                    @include flexbox(column, center, center);
+                    width: 35%;
+                    height: 100%;
+                    color: white;
+                    h1 {
+                        text-align: center;
+                        font-family: Helvetica, sans-serif;
+                        font-weight: 900;
+                        font-size: 120px;
+                    }
+                }
+                .right {
+                    @include flexbox(column, center, center);
+                    width: 65%;
+                    height: 100%;
+                    padding: 10px;
+                    color: white;
+
+                    p {
+                        font-family: "Raleway";
+                        font-weight: 400;
+                        font-size: $text-size-p;
+                    }
+                }
+            }
+        }
+    }
+
+    @media only screen and (max-width: 479px) {
+        .header-text {
+            .title {
+                font-size: $text-size-h2;
             }
 
-            .oferta-h3 {
-                font-size: 16px;
-            }
-
-            .oferta-p {
-                font-size: 12px;
+            .subtitle {
+                font-size: $text-size-p;
             }
         }
 
-        .materias-container {
-            .moveArrows {
-                display: none;
+        .proceso {
+            .row {
+                .step {
+                    width: 90%;
+                    .left {
+                        h1 {
+                            font-size: 100px;
+                        }
+                    }
+                    .right {
+                        p {
+                            font-size: $text-size-min;
+                        }
+                    }
+                }
             }
         }
+
+        padding: 0;
     }
 }
 
@@ -648,8 +811,7 @@
 
 .flex-container-footer {
     @include flexbox(column, space-between, center);
-    min-height: 45vh;
-    height: auto;
+    height: fit-content;
     width: auto;
     background-position: center;
     background-repeat: no-repeat;
@@ -667,13 +829,22 @@
             height: auto;
             width: 100%;
 
+            h2,
             p {
                 font-family: "Raleway";
-                font-weight: 400;
                 text-align: center;
-                font-size: 15px;
                 color: white;
-                margin: 0;
+                margin-bottom: $margin-subtitle;
+            }
+
+            h2  {
+                font-weight: 700;
+                font-size: $text-size-h2;
+            }
+
+            p {
+                font-weight: 400;
+                font-size: $text-size-p;
             }
 
             .footer-logo {
@@ -709,7 +880,7 @@
                         width: auto;
 
                         &:hover {
-                            color: #f1c40f;
+                            color: $color-yellow;
                         }
                     }
                 }
@@ -727,7 +898,7 @@
 
         span {
             @include noSelect();
-            color: grey;
+            color: $color-darkgrey;
             font-size: 11px;
             text-align: center;
             font-family: "Raleway";
@@ -741,7 +912,7 @@
                 transition: all 0.3s ease;
 
                 &:hover {
-                    color: #f1c40f;
+                    color: $color-yellow;
                 }
             }
         }

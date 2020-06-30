@@ -24,7 +24,9 @@
       <a href="#"><img class="nav-img" src="assets/images/logo.png"></a>
       <div class="links">
         <a href="#nosotros"><span data-hover="Nosotros">Nosotros</span></a>
+        <a href="#nivelesEducativos"><span data-hover="Niveles educativos">Niveles educativos</span></a>
         <a href="#inscripciones"><span data-hover="Inscripciones">Inscripciones</span></a>
+        <a href="#contacto"><span data-hover="Contacto">Contacto</span></a>
       </div>
       <a href="https://www.colegiooctaviopaz.com/login" class="btn-login">Iniciar sesión</a>
     </div>
@@ -47,16 +49,18 @@
       </a>
 
       <a class="flex-item" href="#nosotros" onclick="responsiveNavbarFunction()">Nosotros</a>
+      <a class="flex-item" href="#nivelesEducativos" onclick="responsiveNavbarFunction()">Niveles educativos</a>
       <a class="flex-item" href="#inscripciones" onclick="responsiveNavbarFunction()">Inscripciones</a>
+      <a class="flex-item" href="#contacto" onclick="responsiveNavbarFunction()">Contacto</a>
 
-      <a href="https://www.colegiooctaviopaz.com/login" class="btn-login">Iniciar sesión</a>
+      <a class="btn-login flex-item" href="https://www.colegiooctaviopaz.com/login">Iniciar sesión</a>
     </div>
   </nav>
 
   <!-- HEADER -->
   <section id="home" class="header">
     <div class="title">
-      <h1 id="tituloColegio">Colegio Hispano Americano Octavio Paz</h1>
+      <h1 id="tituloColegio">Colegio Hispano Americano<br>Octavio Paz</h1>
       <p id="textoTitulo">La mejor educación humanista para tus hijos</p>
     </div>
   </section>
@@ -96,13 +100,10 @@
     </div>
   </section>
 
-  <!-- ADMISIÓN -->
-  <section id="inscripciones">
 
-  </section>
 
   <!-- OFERTA -->
-  <section id="nivelesEducativos" *ngFor="let nivel of nivelesEducativos">
+  <section id="nivelesEducativos">
     <div class="flex-container-oferta">
       <div class="header-oferta">
         <h2 class="oferta-h2">Preescolar</h2>
@@ -118,44 +119,22 @@
         <div id="cards-preescolar" class="cards">
           <div class="space-for-arrows"></div>
           <div class="card-materia">
-            <p>{{materia.content}}</p>
-            <h2>{{materia.name}}</h2>
+            <h2>Inglés</h2>
           </div>
           <div class="card-materia">
-            <p>{{materia.content}}</p>
-            <h2>{{materia.name}}</h2>
+            <h2>Música</h2>
           </div>
           <div class="card-materia">
-            <p>{{materia.content}}</p>
-            <h2>{{materia.name}}</h2>
+            <h2>Exploración del medio natural y social</h2>
           </div>
           <div class="card-materia">
-            <p>{{materia.content}}</p>
-            <h2>{{materia.name}}</h2>
+            <h2>Pensamiento matemático</h2>
           </div>
           <div class="card-materia">
-            <p>{{materia.content}}</p>
-            <h2>{{materia.name}}</h2>
+            <h2>Lenguaje y comunicación</h2>
           </div>
           <div class="card-materia">
-            <p>{{materia.content}}</p>
-            <h2>{{materia.name}}</h2>
-          </div>
-          <div class="card-materia">
-            <p>{{materia.content}}</p>
-            <h2>{{materia.name}}</h2>
-          </div>
-          <div class="card-materia">
-            <p>{{materia.content}}</p>
-            <h2>{{materia.name}}</h2>
-          </div>
-          <div class="card-materia">
-            <p>{{materia.content}}</p>
-            <h2>{{materia.name}}</h2>
-          </div>
-          <div class="card-materia">
-            <p>{{materia.content}}</p>
-            <h2>{{materia.name}}</h2>
+            <h2>Psicomotricidad</h2>
           </div>
           <div class="space-for-arrows"></div>
         </div>
@@ -164,17 +143,214 @@
         </div>
       </div>
     </div>
+
+    <div class="flex-container-oferta">
+      <div class="header-oferta">
+        <h2 class="oferta-h2">Primaria</h2>
+        <h3 class="oferta-h3">C.C.T 15PPR3113A</h3>
+        <p class="oferta-p">La formación deberá intentar el desarrollo equilibrado y completo del niño en las áreas
+          cognoscitivo, afectivo, fisiológica y del espíritu atendiendo a la personalidad individual en donde el docente
+          se convertirá en ayuda para que los alumnos tengan iniciativas propias para el aprendizaje y que les permitan
+          salir avantes al encontrarse con las leyes de la vida social.</p>
+      </div>
+      <div class="materias-container">
+        <div id="left" class="moveArrows" onclick="cardScroll('cards-primaria', 'left')">
+          <img class="flex-img-arrow" src="assets/images/chevron-back-outline.svg">
+        </div>
+        <div id="cards-primaria" class="cards">
+          <div class="space-for-arrows"></div>
+          <div class="card-materia">
+            <h2>Artes</h2>
+          </div>
+          <div class="card-materia">
+            <h2>Inglés</h2>
+          </div>
+          <div class="card-materia">
+            <h2>Talleres</h2>
+          </div>
+          <div class="card-materia">
+            <h2>Música</h2>
+          </div>
+          <div class="card-materia">
+            <h2>Lenguaje y comunicación</h2>
+          </div>
+          <div class="card-materia">
+            <h2>Matemáticas</h2>
+          </div>
+          <div class="card-materia">
+            <h2>Natación</h2>
+          </div>
+          <div class="card-materia">
+            <h2>Física</h2>
+          </div>
+          <div class="card-materia">
+            <h2>Computación</h2>
+          </div>
+          <div class="card-materia">
+            <h2>Educación física</h2>
+          </div>
+          <div class="space-for-arrows"></div>
+        </div>
+        <div id="right" class="moveArrows" onclick="cardScroll('cards-primaria', 'right')">
+          <img class="flex-img-arrow" src="assets/images/chevron-forward-outline.svg">
+        </div>
+      </div>
+    </div>
+
+    <div class="flex-container-oferta">
+      <div class="header-oferta">
+        <h2 class="oferta-h2">Secundaria</h2>
+        <h3 class="oferta-h3">C.C.T 15PES0920B</h3>
+        <p class="oferta-p">Concientes de la importancia del trabajo educativo, de la satisfacción de lo que se hace,
+          del deseo de educar bajo paradigmas que correspondan a los constantes cambios sociales, conocedores de que la
+          escuela es útil al desarrollo integral del alumno, sin duda un compromiso ineludible el trabajar de manera
+          consciente en actividades creadoras que garanticen un aprendizaje autentico, vivo y real, que vincule alalumno
+          con el nivel inmediato superior.</p>
+      </div>
+      <div class="materias-container">
+        <div id="left" class="moveArrows" onclick="cardScroll('cards-secundaria', 'left')">
+          <img class="flex-img-arrow" src="assets/images/chevron-back-outline.svg">
+        </div>
+        <div id="cards-secundaria" class="cards">
+          <div class="space-for-arrows"></div>
+          <div class="card-materia">
+            <h2>Español</h2>
+          </div>
+          <div class="card-materia">
+            <h2>Robótica</h2>
+          </div>
+          <div class="card-materia">
+            <h2>Natación</h2>
+          </div>
+          <div class="card-materia">
+            <h2>Matemáticas</h2>
+          </div>
+          <div class="card-materia">
+            <h2>Física</h2>
+          </div>
+          <div class="card-materia">
+            <h2>Inglés Básico</h2>
+          </div>
+          <div class="card-materia">
+            <h2>Inglés Intermedio</h2>
+          </div>
+          <div class="card-materia">
+            <h2>Inglés Avanzado</h2>
+          </div>
+          <div class="card-materia">
+            <h2>Química</h2>
+          </div>
+          <div class="card-materia">
+            <h2>Biología</h2>
+          </div>
+          <div class="card-materia">
+            <h2>Historia</h2>
+          </div>
+          <div class="card-materia">
+            <h2>Geografía</h2>
+          </div>
+          <div class="card-materia">
+            <h2>Formación cívica y ética</h2>
+          </div>
+          <div class="card-materia">
+            <h2>Educación Física</h2>
+          </div>
+          <div class="card-materia">
+            <h2>Música</h2>
+          </div>
+          <div class="space-for-arrows"></div>
+        </div>
+        <div id="right" class="moveArrows" onclick="cardScroll('cards-secundaria', 'right')">
+          <img class="flex-img-arrow" src="assets/images/chevron-forward-outline.svg">
+        </div>
+      </div>
+    </div>
   </section>
+
+  <section id="online" class="flex-container-online">
+    <div class="divider">
+      <img class="online-colegio-img" src="assets/images/online2x.png" alt="">
+    </div>
+    <div class="divider">
+      <div class="header-text">
+        <h1 class="tittle">Educación online</h1>
+        <p class="text">
+          Debido al COVID-19 implementamos las herramientas online mas apropiadas para continuar con la educación de sus
+          hijos(as) incrementando su conocimiento en esta nueva realidad.
+        </p>
+      </div>
+      <div class="online-logos">
+        <img src="assets/images/google-meet.svg" alt="">
+        <img src="assets/images/google-classroom.svg" alt="">
+        <img src="assets/images/zoom.svg" alt="">
+        <img src="assets/images/teams.svg" alt="">
+      </div>
+    </div>
+  </section>
+
+  <!-- ADMISIÓN -->
+  <section id="inscripciones" class="flex-container-inscripciones">
+    <div class="header-text">
+      <h1 class="title">Inscripciones</h1>
+      <h2 class="subtitle">Ciclo Escolar 2020 - 2021</h2>
+    </div>
+    <div class="proceso">
+      <div class="row">
+        <div class="step">
+          <div class="left">
+            <h1>1</h1>
+          </div>
+          <div class="right">
+            <p>Realizar el pago de inscripción correspondiente.<br>
+              Al enviar baucher de pago
+            </p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="left">
+            <h1>2</h1>
+          </div>
+          <div class="right">
+            <p>Llenar y enviar formato de inscripción</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="left">
+            <h1>3</h1>
+          </div>
+          <div class="right">
+            <p>Leer y enviar firma electrónica de reglamento escolar</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="left">
+            <h1>4</h1>
+          </div>
+          <div class="right">
+            <p>Solicitar lista de útiles escolares</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="left">
+            <h1>5</h1>
+          </div>
+          <div class="right">
+            <p>Solicitar matricula escolar para accesar a los servicios de la pagina del colegio.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
 
   <!-- FOOTER -->
   <div class="flex-container-footer">
     <div class="footer-box-content">
       <div class="footer-header">
         <img class="footer-logo" src="assets/images/logo.png">
-        <p style="font-weight:700; font-size:20px;">"Educación Humanista para la Libertad del Ser"</p>
-        <p style="margin: 5px 0;">Sientete libre de contactarnos, con gusto te atenderemos y responderemos todas
-          tus respuestas.</p>
-        <p style="font-weight:400; font-size:20px;">+52 1 58 51 68 39</p>
+        <h2>"Educación Humanista para la Libertad del Ser"</h2>
+        <p>Sientete libre de contactarnos, con gusto te atenderemos y responderemos todas tus respuestas.</p>
+        <h2>+52 1 58 51 68 39</h2>
       </div>
 
       <div class="footer-socials">

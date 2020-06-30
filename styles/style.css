@@ -43,7 +43,7 @@
   text-transform: initial !important;
   font-family: "Raleway" !important;
   font-weight: 700;
-  font-size: 14px;
+  font-size: 16px;
   transition: all 0.5s ease-out;
   cursor: pointer; }
   .btn-login:hover {
@@ -90,7 +90,7 @@
       cursor: pointer;
       color: white;
       text-align: center;
-      font-size: 25px;
+      font-size: 25.6px;
       font-family: "Raleway";
       font-weight: 600;
       text-transform: uppercase;
@@ -102,7 +102,7 @@
         height: 70px !important; }
     #responsive-navbar #navbarBox .btn-login {
       margin-top: 10px !important;
-      font-size: 18px; }
+      font-size: 16px; }
 
 .flex-container-nav {
   display: -webkit-box;
@@ -120,7 +120,8 @@
   position: fixed;
   z-index: 100;
   background: transparent;
-  transition: all 1.2s ease-out; }
+  transition: all 1.2s ease-out;
+  background: rgba(0, 0, 0, 0.1); }
   .flex-container-nav.black {
     background: rgba(0, 0, 0, 0.85); }
   .flex-container-nav a {
@@ -140,14 +141,14 @@
       text-decoration: none;
       text-transform: uppercase;
       font-family: "Raleway";
-      font-weight: 600;
+      font-weight: 700;
       text-align: center;
       overflow: hidden;
       height: auto; }
     .flex-container-nav .links a span {
       text-align: center;
       cursor: pointer;
-      font-size: 18px;
+      font-size: 16px;
       position: relative;
       display: inline-block;
       -webkit-transition: -webkit-transform 0.3s;
@@ -169,7 +170,7 @@
       transform: translateY(-100%); }
 
 /* Mobile and iPad Portrait */
-@media only screen and (max-width: 1145px) {
+@media only screen and (max-width: 810px) {
   #main-navbar {
     display: none; }
   #responsive-navbar {
@@ -192,50 +193,44 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../assets/images/pencils.jpg"); }
+  background-image: url("../assets/images/pencils.jpg"); }
   .header .title {
-    height: 40vh;
     width: 90%;
-    margin: 0;
+    height: fit-content;
     position: absolute;
-    top: 55%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    padding: 0 20px;
     /* Mobile and iPad Portrait */
     /* Mobile Landscape and Portrait */
     /* Mobile Portrait */ }
     .header .title #tituloColegio {
       color: white;
-      text-shadow: 0px 2px 5px #7f8c8d;
+      text-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
       font-family: "Raleway";
-      font-weight: 400;
-      font-size: 50px;
+      font-weight: 700;
+      font-size: 65.5px;
       text-transform: uppercase; }
       .header .title #tituloColegio::first-letter {
         font-size: 115%; }
     .header .title #textoTitulo {
       color: white;
-      text-shadow: 0px 2px 5px #7f8c8d;
+      text-shadow: 0px 0px 8px rgba(0, 0, 0, 0.5);
       font-family: "Raleway";
       font-weight: 400;
-      font-size: 25px;
+      font-size: 25.6px;
       margin-top: 10px; }
-    @media only screen and (max-width: 959px) {
+    @media only screen and (max-width: 950px) {
+      .header .title #tituloColegio {
+        font-size: 55px; } }
+    @media only screen and (max-width: 767px) {
       .header .title #tituloColegio {
         font-size: 45px; }
       .header .title #textoTitulo {
-        font-size: 20px; } }
-    @media only screen and (max-width: 767px) {
-      .header .title #tituloColegio {
-        font-size: 40px; }
-      .header .title #textoTitulo {
-        font-size: 17.5px; } }
+        font-size: 16px; } }
     @media only screen and (max-width: 479px) {
       .header .title #tituloColegio {
-        font-size: 35px; }
-      .header .title #textoTitulo {
-        font-size: 15px; } }
+        font-size: 35px; } }
 
 /*------------NOSOTROS-------------*/
 .flex-container-nosotros {
@@ -251,7 +246,6 @@
   min-height: 70vh;
   height: auto;
   width: 100vw;
-  align-items: center;
   position: relative;
   background-position: center;
   background-repeat: no-repeat;
@@ -273,15 +267,16 @@
     position: absolute;
     z-index: 1; }
     .flex-container-nosotros .flex-container-nosotros-card .title-nosotros {
-      font-size: 35px;
+      font-size: 41px;
       font-family: "Raleway";
       font-weight: 700;
-      text-transform: uppercase; }
+      text-transform: uppercase;
+      margin-bottom: 11.25px; }
     .flex-container-nosotros .flex-container-nosotros-card .text-nosotros {
       width: 80%;
       display: none;
       text-align: justify;
-      font-size: 15px;
+      font-size: 16px;
       line-height: 135%;
       font-family: "Raleway";
       font-weight: 400; }
@@ -315,40 +310,221 @@
         background-color: white; }
         .flex-container-nosotros .flex-container-nosotros-card.right:hover .text-nosotros, .flex-container-nosotros .flex-container-nosotros-card.right:active .text-nosotros, .flex-container-nosotros .flex-container-nosotros-card.right:focus .text-nosotros {
           display: initial; }
-    @media only screen and (max-width: 767px) {
-      .flex-container-nosotros .flex-container-nosotros-card .title-nosotros {
-        font-family: "Raleway";
-        font-weight: 400;
-        font-size: 30px; }
-      .flex-container-nosotros .flex-container-nosotros-card .text-nosotros {
-        font-size: 13px; } }
     @media only screen and (max-width: 479px) {
       .flex-container-nosotros .flex-container-nosotros-card .title-nosotros {
-        font-family: "Raleway";
-        font-weight: 400;
-        font-size: 30px; }
+        font-size: 25.6px; }
       .flex-container-nosotros .flex-container-nosotros-card .text-nosotros {
-        font-size: 12px; } }
+        font-size: 13px; } }
 
-/*------------Admisión-------------*/
 /*------------Oferta-------------*/
-.flex-container-oferta {
+#nivelesEducativos {
+  padding-top: 30px; }
+  #nivelesEducativos .flex-container-oferta {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    min-height: 100vh;
+    align-items: center;
+    padding: 10px 0; }
+    #nivelesEducativos .flex-container-oferta .header-oferta {
+      display: -webkit-box;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 18px 0;
+      text-align: center;
+      height: auto;
+      width: 70vw; }
+      #nivelesEducativos .flex-container-oferta .header-oferta .oferta-h2 {
+        color: #f1c40f;
+        font-family: "Raleway";
+        font-weight: 900;
+        letter-spacing: 5px;
+        text-transform: uppercase;
+        font-size: 41px;
+        margin-bottom: 11.25px; }
+      #nivelesEducativos .flex-container-oferta .header-oferta .oferta-h3,
+      #nivelesEducativos .flex-container-oferta .header-oferta .oferta-p {
+        color: #191919;
+        font-family: "Raleway";
+        text-align: center; }
+      #nivelesEducativos .flex-container-oferta .header-oferta .oferta-h3 {
+        font-weight: 700;
+        font-size: 25.6px;
+        margin-bottom: 11.25px; }
+      #nivelesEducativos .flex-container-oferta .header-oferta .oferta-p {
+        font-weight: 400;
+        font-size: 16px; }
+    #nivelesEducativos .flex-container-oferta .materias-container {
+      display: -webkit-box;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      min-height: 70vh;
+      height: auto;
+      width: 100%; }
+      #nivelesEducativos .flex-container-oferta .materias-container .moveArrows {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 60vh;
+        min-width: 5%;
+        position: absolute;
+        cursor: pointer; }
+        #nivelesEducativos .flex-container-oferta .materias-container .moveArrows .flex-img-arrow {
+          -webkit-touch-callout: none;
+          /* iOS Safari */
+          -webkit-user-select: none;
+          /* Safari */
+          -khtml-user-select: none;
+          /* Konqueror HTML */
+          -moz-user-select: none;
+          /* Old versions of Firefox */
+          -ms-user-select: none;
+          /* Internet Explorer/Edge */
+          user-select: none;
+          /* Non-prefixed version, currently */
+          width: 40px;
+          height: auto;
+          cursor: pointer; }
+      #nivelesEducativos .flex-container-oferta .materias-container #left {
+        left: 0; }
+        #nivelesEducativos .flex-container-oferta .materias-container #left:hover, #nivelesEducativos .flex-container-oferta .materias-container #left:active, #nivelesEducativos .flex-container-oferta .materias-container #left:focus {
+          background: #ffe15942;
+          background: -webkit-linear-gradient(to right, #ffe15942, #ffe1591e, #ffe15900);
+          background: -moz-linear-gradient(to right, #ffe15942, #ffe1591e, #ffe15900);
+          background: linear-gradient(to right, #ffe15942, #ffe1591e, #ffe15900); }
+      #nivelesEducativos .flex-container-oferta .materias-container #right {
+        right: 0; }
+        #nivelesEducativos .flex-container-oferta .materias-container #right:hover, #nivelesEducativos .flex-container-oferta .materias-container #right:active, #nivelesEducativos .flex-container-oferta .materias-container #right:focus {
+          background: #ffe15942;
+          background: -webkit-linear-gradient(to left, #ffe15942, #ffe1591e, #ffe15900);
+          background: -moz-linear-gradient(to left, #ffe15942, #ffe1591e, #ffe15900);
+          background: linear-gradient(to left, #ffe15942, #ffe1591e, #ffe15900); }
+      #nivelesEducativos .flex-container-oferta .materias-container .cards {
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        width: 95%;
+        min-height: 75%;
+        height: auto;
+        transition: ease 2s all;
+        scroll-behavior: smooth;
+        overflow-x: scroll; }
+        #nivelesEducativos .flex-container-oferta .materias-container .cards .space-for-arrows {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 70vh;
+          min-width: 2.5%; }
+      #nivelesEducativos .flex-container-oferta .materias-container .card-materia {
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        padding: 20px;
+        margin: 0 4px;
+        border-radius: 5px;
+        width: 250px;
+        min-width: 250px;
+        height: 60vh;
+        /* Transition */
+        -webkit-transition: 0.5s ease-out;
+        -moz-transition: 0.5s ease-out;
+        -o-transition: 0.5s ease-out;
+        transition: 0.5s ease-out;
+        /* Background */
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-image: linear-gradient(rgba(53, 146, 207, 0.6), rgba(53, 146, 207, 0.8)); }
+        #nivelesEducativos .flex-container-oferta .materias-container .card-materia h2 {
+          font-family: "Raleway";
+          font-weight: 700;
+          font-size: 25.6px;
+          color: #fff;
+          text-align: center;
+          transition: all 0.5s ease; }
+        #nivelesEducativos .flex-container-oferta .materias-container .card-materia:nth-child(5n + 3) {
+          background-image: linear-gradient(rgba(232, 59, 101, 0.6), rgba(232, 59, 101, 0.8)); }
+        #nivelesEducativos .flex-container-oferta .materias-container .card-materia:nth-child(5n + 4) {
+          background-image: linear-gradient(rgba(243, 204, 84, 0.6), rgba(243, 204, 84, 0.8)); }
+        #nivelesEducativos .flex-container-oferta .materias-container .card-materia:nth-child(5n + 5) {
+          background-image: linear-gradient(rgba(79, 182, 157, 0.6), rgba(79, 182, 157, 0.8)); }
+        #nivelesEducativos .flex-container-oferta .materias-container .card-materia:nth-child(5n + 6) {
+          background-image: linear-gradient(rgba(132, 81, 153, 0.6), rgba(132, 81, 153, 0.8)); }
+        #nivelesEducativos .flex-container-oferta .materias-container .card-materia:hover, #nivelesEducativos .flex-container-oferta .materias-container .card-materia:active, #nivelesEducativos .flex-container-oferta .materias-container .card-materia:focus {
+          height: 70vh;
+          min-width: 300px;
+          background-image: linear-gradient(rgba(53, 146, 207, 0.6), rgba(53, 146, 207, 0.8)); }
+          #nivelesEducativos .flex-container-oferta .materias-container .card-materia:hover:nth-child(5n + 3), #nivelesEducativos .flex-container-oferta .materias-container .card-materia:active:nth-child(5n + 3), #nivelesEducativos .flex-container-oferta .materias-container .card-materia:focus:nth-child(5n + 3) {
+            background-image: linear-gradient(rgba(232, 59, 101, 0.6), rgba(232, 59, 101, 0.8)); }
+          #nivelesEducativos .flex-container-oferta .materias-container .card-materia:hover:nth-child(5n + 4), #nivelesEducativos .flex-container-oferta .materias-container .card-materia:active:nth-child(5n + 4), #nivelesEducativos .flex-container-oferta .materias-container .card-materia:focus:nth-child(5n + 4) {
+            background-image: linear-gradient(rgba(243, 204, 84, 0.6), rgba(243, 204, 84, 0.8)); }
+          #nivelesEducativos .flex-container-oferta .materias-container .card-materia:hover:nth-child(5n + 5), #nivelesEducativos .flex-container-oferta .materias-container .card-materia:active:nth-child(5n + 5), #nivelesEducativos .flex-container-oferta .materias-container .card-materia:focus:nth-child(5n + 5) {
+            background-image: linear-gradient(rgba(79, 182, 157, 0.6), rgba(79, 182, 157, 0.8)); }
+          #nivelesEducativos .flex-container-oferta .materias-container .card-materia:hover:nth-child(5n + 6), #nivelesEducativos .flex-container-oferta .materias-container .card-materia:active:nth-child(5n + 6), #nivelesEducativos .flex-container-oferta .materias-container .card-materia:focus:nth-child(5n + 6) {
+            background-image: linear-gradient(rgba(132, 81, 153, 0.6), rgba(132, 81, 153, 0.8)); }
+          #nivelesEducativos .flex-container-oferta .materias-container .card-materia:hover h2, #nivelesEducativos .flex-container-oferta .materias-container .card-materia:active h2, #nivelesEducativos .flex-container-oferta .materias-container .card-materia:focus h2 {
+            font-size: 41px; }
+    @media only screen and (max-width: 479px) {
+      #nivelesEducativos .flex-container-oferta .header-oferta {
+        width: 90%; }
+        #nivelesEducativos .flex-container-oferta .header-oferta .oferta-h2 {
+          font-size: 25.6px; }
+        #nivelesEducativos .flex-container-oferta .header-oferta .oferta-h3 {
+          font-size: 16px; }
+        #nivelesEducativos .flex-container-oferta .header-oferta .oferta-p {
+          font-size: 13px; }
+      #nivelesEducativos .flex-container-oferta .materias-container .moveArrows {
+        display: none; } }
+
+/*------------Online-------------*/
+.flex-container-online {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
   flex-wrap: wrap;
-  flex-direction: column;
-  justify-content: flex-start;
+  flex-direction: row;
+  justify-content: center;
   align-items: center;
-  width: 100%;
+  min-height: 50vh;
   height: auto;
-  min-height: 100vh;
-  align-items: center;
-  padding: 10px 0;
-  background-color: #151515; }
-  .flex-container-oferta .header-oferta {
+  width: 100vw;
+  padding: 30px 0; }
+  .flex-container-online .divider {
     display: -webkit-box;
     display: -moz-box;
     display: -ms-flexbox;
@@ -358,103 +534,13 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 70vw;
-    height: auto;
-    min-height: 30vh;
-    text-align: center; }
-    .flex-container-oferta .header-oferta .oferta-h2 {
-      color: #f1c40f;
-      font-family: "Raleway";
-      font-weight: 700;
-      font-size: 50px;
-      margin: 0; }
-    .flex-container-oferta .header-oferta .oferta-h3 {
-      margin: 5px 0;
-      font-family: "Raleway";
-      font-weight: 400;
-      text-align: center;
-      font-size: 20px;
-      color: white; }
-    .flex-container-oferta .header-oferta .oferta-p {
-      margin: 0;
-      font-family: "Raleway";
-      font-weight: 400;
-      font-size: 15px;
-      color: white; }
-  .flex-container-oferta .materias-container {
-    display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    min-height: 70vh;
-    height: auto;
-    width: 100%; }
-    .flex-container-oferta .materias-container .moveArrows {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 60vh;
-      min-width: 5%;
-      position: absolute;
-      cursor: pointer; }
-      .flex-container-oferta .materias-container .moveArrows .flex-img-arrow {
-        -webkit-touch-callout: none;
-        /* iOS Safari */
-        -webkit-user-select: none;
-        /* Safari */
-        -khtml-user-select: none;
-        /* Konqueror HTML */
-        -moz-user-select: none;
-        /* Old versions of Firefox */
-        -ms-user-select: none;
-        /* Internet Explorer/Edge */
-        user-select: none;
-        /* Non-prefixed version, currently */
-        width: 40px;
-        height: auto;
-        cursor: pointer; }
-    .flex-container-oferta .materias-container #left {
-      left: 0; }
-      .flex-container-oferta .materias-container #left:hover, .flex-container-oferta .materias-container #left:active, .flex-container-oferta .materias-container #left:focus {
-        background: #ffe15942;
-        background: -webkit-linear-gradient(to right, #ffe15942, #ffe1591e, #ffe15900);
-        background: -moz-linear-gradient(to right, #ffe15942, #ffe1591e, #ffe15900);
-        background: linear-gradient(to right, #ffe15942, #ffe1591e, #ffe15900); }
-    .flex-container-oferta .materias-container #right {
-      right: 0; }
-      .flex-container-oferta .materias-container #right:hover, .flex-container-oferta .materias-container #right:active, .flex-container-oferta .materias-container #right:focus {
-        background: #ffe15942;
-        background: -webkit-linear-gradient(to left, #ffe15942, #ffe1591e, #ffe15900);
-        background: -moz-linear-gradient(to left, #ffe15942, #ffe1591e, #ffe15900);
-        background: linear-gradient(to left, #ffe15942, #ffe1591e, #ffe15900); }
-    .flex-container-oferta .materias-container .cards {
-      display: -webkit-box;
-      display: -moz-box;
-      display: -ms-flexbox;
-      display: -webkit-flex;
-      display: flex;
-      flex-direction: row;
-      justify-content: flex-start;
-      align-items: center;
-      width: 95%;
-      min-height: 75%;
-      height: auto;
-      transition: ease 2s all;
-      scroll-behavior: smooth;
-      overflow-x: scroll; }
-      .flex-container-oferta .materias-container .cards .space-for-arrows {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 70vh;
-        min-width: 2.5%; }
-    .flex-container-oferta .materias-container .card-materia {
+    width: 45%;
+    height: 100%;
+    padding: 30px; }
+    .flex-container-online .divider .online-colegio-img {
+      width: 100%;
+      height: auto; }
+    .flex-container-online .divider .header-text {
       display: -webkit-box;
       display: -moz-box;
       display: -ms-flexbox;
@@ -462,65 +548,181 @@
       display: flex;
       flex-wrap: wrap;
       flex-direction: column;
-      justify-content: space-between;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 18px 0; }
+      .flex-container-online .divider .header-text .tittle,
+      .flex-container-online .divider .header-text .text {
+        width: 100%;
+        font-family: "Raleway";
+        text-align: start; }
+      .flex-container-online .divider .header-text .tittle {
+        text-transform: uppercase;
+        font-size: 41px;
+        color: #f1c40f;
+        font-weight: 900;
+        letter-spacing: 5px;
+        margin-bottom: 11.25px; }
+      .flex-container-online .divider .header-text .text {
+        font-size: 16px;
+        color: #191919;
+        font-weight: 400;
+        text-align: justify; }
+    .flex-container-online .divider .online-logos {
+      display: -webkit-box;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      justify-content: space-around;
       align-items: center;
-      cursor: pointer;
-      padding: 20px;
-      margin: 0 4px;
-      border-radius: 5px;
-      min-width: 250px;
-      height: 60vh;
-      /* Transition */
-      -webkit-transition: 0.5s ease-out;
-      -moz-transition: 0.5s ease-out;
-      -o-transition: 0.5s ease-out;
-      transition: 0.5s ease-out;
-      /* Background */
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-image: linear-gradient(to bottom, rgba(206, 206, 206, 0.3), rgba(206, 206, 206, 0.5)), url(../assets/images/whiteBackground.jpg); }
-      .flex-container-oferta .materias-container .card-materia h2 {
-        font-family: "Raleway";
-        font-weight: 700;
-        font-size: 20px;
-        color: #000;
-        text-align: center;
-        transition: all 0.5s ease; }
-      .flex-container-oferta .materias-container .card-materia:nth-child(2n + 1) {
-        background-image: linear-gradient(to bottom, rgba(206, 206, 206, 0.3), rgba(206, 206, 206, 0.5)), url(https://images.unsplash.com/photo-1424115087662-5845efc6b366?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80); }
-      .flex-container-oferta .materias-container .card-materia:hover, .flex-container-oferta .materias-container .card-materia:active, .flex-container-oferta .materias-container .card-materia:focus {
-        height: 70vh;
-        min-width: 300px;
-        background-image: linear-gradient(to bottom, rgba(206, 206, 206, 0), rgba(206, 206, 206, 0.3)), url(../assets/images/whiteBackground.jpg); }
-        .flex-container-oferta .materias-container .card-materia:hover:nth-child(2n + 1), .flex-container-oferta .materias-container .card-materia:active:nth-child(2n + 1), .flex-container-oferta .materias-container .card-materia:focus:nth-child(2n + 1) {
-          background-image: linear-gradient(to bottom, rgba(206, 206, 206, 0), rgba(206, 206, 206, 0.3)), url(https://images.unsplash.com/photo-1424115087662-5845efc6b366?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80); }
-        .flex-container-oferta .materias-container .card-materia:hover h2, .flex-container-oferta .materias-container .card-materia:active h2, .flex-container-oferta .materias-container .card-materia:focus h2 {
-          font-size: 25px; }
+      width: 90%;
+      height: auto; }
+      .flex-container-online .divider .online-logos img {
+        height: 40px;
+        width: auto;
+        margin: 5px; }
   @media only screen and (max-width: 767px) {
-    .flex-container-oferta .header-oferta {
-      width: 85%; }
-      .flex-container-oferta .header-oferta .oferta-h2 {
-        font-family: "Raleway";
-        font-weight: 400;
-        font-size: 30px; }
-      .flex-container-oferta .header-oferta .oferta-h3 {
-        font-size: 18px; }
-      .flex-container-oferta .header-oferta .oferta-p {
-        font-size: 13px; } }
+    .flex-container-online {
+      flex-direction: column; }
+      .flex-container-online .divider {
+        width: 90%;
+        padding: 10px; }
+        .flex-container-online .divider .header-text .tittle {
+          text-align: center; } }
   @media only screen and (max-width: 479px) {
-    .flex-container-oferta .header-oferta {
-      width: 95%; }
-      .flex-container-oferta .header-oferta .oferta-h2 {
-        font-family: "Raleway";
-        font-weight: 400;
-        font-size: 30px; }
-      .flex-container-oferta .header-oferta .oferta-h3 {
+    .flex-container-online .divider .header-text .tittle {
+      font-size: 25.6px; }
+    .flex-container-online .divider .header-text .text {
+      font-size: 13px; } }
+
+/*------------Inscipciones-------------*/
+.flex-container-inscripciones {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 50vh;
+  height: auto;
+  width: 100vw;
+  padding: 30px 50px; }
+  .flex-container-inscripciones .header-text {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 18px 0; }
+    .flex-container-inscripciones .header-text .title,
+    .flex-container-inscripciones .header-text .subtitle {
+      font-family: "Raleway";
+      text-transform: uppercase;
+      letter-spacing: 5px;
+      text-align: center; }
+    .flex-container-inscripciones .header-text .title {
+      font-size: 41px;
+      color: #f1c40f;
+      font-weight: 900;
+      margin-bottom: 11.25px; }
+    .flex-container-inscripciones .header-text .subtitle {
+      font-size: 25.6px;
+      color: #191919;
+      font-weight: 600; }
+  .flex-container-inscripciones .proceso {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+    .flex-container-inscripciones .proceso .row {
+      display: -webkit-box;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: center; }
+      .flex-container-inscripciones .proceso .row .step {
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: 300px;
+        height: 350px;
+        margin: 20px;
+        border-radius: 5px;
+        background-image: linear-gradient(rgba(78, 170, 48, 0.6), rgba(78, 170, 48, 0.8)); }
+        .flex-container-inscripciones .proceso .row .step .left {
+          display: -webkit-box;
+          display: -moz-box;
+          display: -ms-flexbox;
+          display: -webkit-flex;
+          display: flex;
+          flex-wrap: wrap;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          width: 35%;
+          height: 100%;
+          color: white; }
+          .flex-container-inscripciones .proceso .row .step .left h1 {
+            text-align: center;
+            font-family: Helvetica, sans-serif;
+            font-weight: 900;
+            font-size: 120px; }
+        .flex-container-inscripciones .proceso .row .step .right {
+          display: -webkit-box;
+          display: -moz-box;
+          display: -ms-flexbox;
+          display: -webkit-flex;
+          display: flex;
+          flex-wrap: wrap;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          width: 65%;
+          height: 100%;
+          padding: 10px;
+          color: white; }
+          .flex-container-inscripciones .proceso .row .step .right p {
+            font-family: "Raleway";
+            font-weight: 400;
+            font-size: 16px; }
+  @media only screen and (max-width: 479px) {
+    .flex-container-inscripciones {
+      padding: 0; }
+      .flex-container-inscripciones .header-text .title {
+        font-size: 25.6px; }
+      .flex-container-inscripciones .header-text .subtitle {
         font-size: 16px; }
-      .flex-container-oferta .header-oferta .oferta-p {
-        font-size: 12px; }
-    .flex-container-oferta .materias-container .moveArrows {
-      display: none; } }
+      .flex-container-inscripciones .proceso .row .step {
+        width: 90%; }
+        .flex-container-inscripciones .proceso .row .step .left h1 {
+          font-size: 100px; }
+        .flex-container-inscripciones .proceso .row .step .right p {
+          font-size: 13px; } }
 
 /*------------Footer-------------*/
 .flex-container-footer {
@@ -533,8 +735,7 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  min-height: 45vh;
-  height: auto;
+  height: fit-content;
   width: auto;
   background-position: center;
   background-repeat: no-repeat;
@@ -565,13 +766,18 @@
       align-items: center;
       height: auto;
       width: 100%; }
+      .flex-container-footer .footer-box-content .footer-header h2,
       .flex-container-footer .footer-box-content .footer-header p {
         font-family: "Raleway";
-        font-weight: 400;
         text-align: center;
-        font-size: 15px;
         color: white;
-        margin: 0; }
+        margin-bottom: 11.25px; }
+      .flex-container-footer .footer-box-content .footer-header h2  {
+        font-weight: 700;
+        font-size: 25.6px; }
+      .flex-container-footer .footer-box-content .footer-header p {
+        font-weight: 400;
+        font-size: 16px; }
       .flex-container-footer .footer-box-content .footer-header .footer-logo {
         width: 120px;
         height: 120px;
@@ -644,7 +850,7 @@
       /* Internet Explorer/Edge */
       user-select: none;
       /* Non-prefixed version, currently */
-      color: grey;
+      color: #191919;
       font-size: 11px;
       text-align: center;
       font-family: "Raleway";
