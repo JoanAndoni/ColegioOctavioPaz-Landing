@@ -361,7 +361,7 @@ $margin-subtitle: 11.25px;
             &:active,
             &:focus {
                 clip-path: polygon(0% 0%, 90% 0%, 90% 100%, 0% 100%);
-                z-index: 1;
+                z-index: 2;
                 background-color: rgba(0, 0, 0, 1);
                 .text-nosotros {
                     display: initial;
@@ -384,7 +384,7 @@ $margin-subtitle: 11.25px;
             &:active,
             &:focus {
                 clip-path: polygon(10% 0%, 100% 0%, 100% 100%, 10% 100%);
-                z-index: 1;
+                z-index: 2;
                 background-color: rgba(255, 255, 255, 1);
                 .text-nosotros {
                     display: initial;
@@ -652,10 +652,13 @@ $margin-subtitle: 11.25px;
     #info-materia {
         @include flexbox(column, center, center);
         width: 75%;
+        padding-top: 55px;
+        overflow-y: scroll;
 
         #imagen-materia {
             height: 50vh;
             width: auto;
+            border-radius: 10px;
             margin: $margin-subtitle 0;
         }
 
