@@ -527,7 +527,8 @@
   #popup #menu-bottom {
     position: fixed;
     top: 1%;
-    right: 1%; }
+    right: 1%;
+    cursor: pointer; }
     #popup #menu-bottom .flex-img-burguer {
       height: 50px; }
   #popup #info-materia {
@@ -541,8 +542,7 @@
     justify-content: center;
     align-items: center;
     width: 75%;
-    padding-top: 55px;
-    overflow-y: scroll; }
+    height: auto; }
     #popup #info-materia #imagen-materia {
       height: 50vh;
       width: auto;
@@ -562,13 +562,17 @@
       font-size: 18px;
       text-align: justify;
       color: #fff; }
-  @media only screen and (max-width: 640px) {
-    #popup #info-materia {
-      width: 90%; }
-      #popup #info-materia #imagen-materia {
-        height: auto;
-        width: 100%;
-        margin: 11.25px 0; } }
+  @media only screen and (max-width: 900px) {
+    #popup {
+      justify-content: start;
+      overflow-x: scroll; }
+      #popup #info-materia {
+        width: 90%;
+        margin: 55px 0 20px 0; }
+        #popup #info-materia #imagen-materia {
+          height: auto;
+          width: 100%;
+          margin: 0; } }
 
 /*------------Online-------------*/
 .flex-container-online {

@@ -643,6 +643,7 @@ $margin-subtitle: 11.25px;
         position: fixed;
         top: 1%;
         right: 1%;
+        cursor: pointer;
 
         .flex-img-burguer {
             height: 50px;
@@ -652,8 +653,7 @@ $margin-subtitle: 11.25px;
     #info-materia {
         @include flexbox(column, center, center);
         width: 75%;
-        padding-top: 55px;
-        overflow-y: scroll;
+        height: auto;
 
         #imagen-materia {
             height: 50vh;
@@ -680,13 +680,16 @@ $margin-subtitle: 11.25px;
             color: #fff;
         }
     }
-    @media only screen and (max-width: 640px) {
+    @media only screen and (max-width: 900px) {
+        justify-content: start;
+        overflow-x: scroll;
         #info-materia {
             width: 90%;
+            margin: 55px 0 20px 0;
             #imagen-materia {
                 height: auto;
                 width: 100%;
-                margin: $margin-subtitle 0;
+                margin: 0;
             }
         }
     }
