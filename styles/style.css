@@ -649,7 +649,7 @@
       flex-direction: row;
       justify-content: space-around;
       align-items: center;
-      width: 90%;
+      width: 100%;
       height: auto; }
       .flex-container-online .divider .online-logos img {
         height: 40px;
@@ -745,7 +745,7 @@
         height: 350px;
         margin: 20px;
         border-radius: 5px;
-        background-image: linear-gradient(rgba(78, 170, 48, 0.6), rgba(78, 170, 48, 0.8)); }
+        background-image: linear-gradient(rgba(78, 170, 48, 0.6), rgba(78, 170, 48, 0.7)); }
         .flex-container-inscripciones .proceso .row .step .left {
           display: -webkit-box;
           display: -moz-box;
@@ -776,7 +776,7 @@
           align-items: center;
           width: 65%;
           height: 100%;
-          padding: 10px;
+          padding: 5px;
           color: white; }
           .flex-container-inscripciones .proceso .row .step .right p {
             font-family: "Raleway";
@@ -791,9 +791,14 @@
       .flex-container-inscripciones .header-text .subtitle {
         font-size: 18px; }
       .flex-container-inscripciones .proceso .row .step {
-        width: 90%; }
+        width: 70vw;
+        min-height: 70vw;
+        height: auto;
+        margin: 10px; }
         .flex-container-inscripciones .proceso .row .step .left h1 {
-          font-size: 100px; } }
+          font-size: 100px; }
+        .flex-container-inscripciones .proceso .row .step .right p {
+          font-size: 14px; } }
 
 /*------------Footer-------------*/
 .flex-container-footer {

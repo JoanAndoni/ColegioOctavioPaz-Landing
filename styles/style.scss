@@ -751,7 +751,7 @@ $margin-subtitle: 11.25px;
 
         .online-logos {
             @include flexbox(row, space-around, center);
-            width: 90%;
+            width: 100%;
             height: auto;
             img {
                 height: 40px;
@@ -831,7 +831,7 @@ $margin-subtitle: 11.25px;
                 height: 350px;
                 margin: 20px;
                 border-radius: 5px;
-                background-image: linear-gradient(rgba(#4eaa30, 0.6), rgba(#4eaa30, 0.8));
+                background-image: linear-gradient(rgba(#4eaa30, 0.6), rgba(#4eaa30, 0.7));
 
                 .left {
                     @include flexbox(column, center, center);
@@ -849,7 +849,7 @@ $margin-subtitle: 11.25px;
                     @include flexbox(column, center, center);
                     width: 65%;
                     height: 100%;
-                    padding: 10px;
+                    padding: 5px;
                     color: white;
 
                     p {
@@ -877,10 +877,18 @@ $margin-subtitle: 11.25px;
         .proceso {
             .row {
                 .step {
-                    width: 90%;
+                    width: 70vw;
+                    min-height: 70vw;
+                    height: auto;
+                    margin: 10px;
                     .left {
                         h1 {
                             font-size: 100px;
+                        }
+                    }
+                    .right {
+                        p {
+                            font-size: $text-size-responsive-p;
                         }
                     }
                 }
