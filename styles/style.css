@@ -50,6 +50,9 @@
     color: #dd4b12 !important;
     background: white; }
 
+.number {
+  font-family: Helvetica, sans-serif !important; }
+
 /*--------NAVBAR---------*/
 #responsive-navbar {
   display: none; }
@@ -387,7 +390,7 @@
         justify-content: center;
         align-items: center;
         height: 60vh;
-        min-width: 5%;
+        width: 40px;
         position: absolute;
         cursor: pointer; }
         #nivelesEducativos .flex-container-oferta .materias-container .moveArrows .flex-img-arrow {
@@ -405,21 +408,16 @@
           /* Non-prefixed version, currently */
           width: 40px;
           height: auto;
+          transition: ease 0.3s;
           cursor: pointer; }
       #nivelesEducativos .flex-container-oferta .materias-container #left {
         left: 0; }
-        #nivelesEducativos .flex-container-oferta .materias-container #left:hover, #nivelesEducativos .flex-container-oferta .materias-container #left:active, #nivelesEducativos .flex-container-oferta .materias-container #left:focus {
-          background: #ffe15942;
-          background: -webkit-linear-gradient(to right, #ffe15942, #ffe1591e, #ffe15900);
-          background: -moz-linear-gradient(to right, #ffe15942, #ffe1591e, #ffe15900);
-          background: linear-gradient(to right, #ffe15942, #ffe1591e, #ffe15900); }
+        #nivelesEducativos .flex-container-oferta .materias-container #left:hover .flex-img-arrow, #nivelesEducativos .flex-container-oferta .materias-container #left:active .flex-img-arrow, #nivelesEducativos .flex-container-oferta .materias-container #left:focus .flex-img-arrow {
+          width: 50px; }
       #nivelesEducativos .flex-container-oferta .materias-container #right {
         right: 0; }
-        #nivelesEducativos .flex-container-oferta .materias-container #right:hover, #nivelesEducativos .flex-container-oferta .materias-container #right:active, #nivelesEducativos .flex-container-oferta .materias-container #right:focus {
-          background: #ffe15942;
-          background: -webkit-linear-gradient(to left, #ffe15942, #ffe1591e, #ffe15900);
-          background: -moz-linear-gradient(to left, #ffe15942, #ffe1591e, #ffe15900);
-          background: linear-gradient(to left, #ffe15942, #ffe1591e, #ffe15900); }
+        #nivelesEducativos .flex-container-oferta .materias-container #right:hover .flex-img-arrow, #nivelesEducativos .flex-container-oferta .materias-container #right:active .flex-img-arrow, #nivelesEducativos .flex-container-oferta .materias-container #right:focus .flex-img-arrow {
+          width: 50px; }
       #nivelesEducativos .flex-container-oferta .materias-container .cards {
         display: -webkit-box;
         display: -moz-box;
@@ -429,18 +427,12 @@
         flex-direction: row;
         justify-content: flex-start;
         align-items: center;
-        width: 95%;
+        width: calc(100% - 100px);
         min-height: 75%;
         height: auto;
         transition: ease 2s all;
         scroll-behavior: smooth;
         overflow-x: scroll; }
-        #nivelesEducativos .flex-container-oferta .materias-container .cards .space-for-arrows {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          height: 70vh;
-          min-width: 2.5%; }
       #nivelesEducativos .flex-container-oferta .materias-container .card-materia {
         display: -webkit-box;
         display: -moz-box;
@@ -452,7 +444,7 @@
         justify-content: center;
         align-items: center;
         cursor: pointer;
-        padding: 20px;
+        padding: 15px;
         margin: 0 4px;
         border-radius: 5px;
         width: 250px;
@@ -475,28 +467,31 @@
           color: #fff;
           text-align: center;
           transition: all 0.5s ease; }
-        #nivelesEducativos .flex-container-oferta .materias-container .card-materia:nth-child(5n + 3) {
+        #nivelesEducativos .flex-container-oferta .materias-container .card-materia:nth-child(5n + 2) {
           background-image: linear-gradient(rgba(232, 59, 101, 0.6), rgba(232, 59, 101, 0.8)); }
-        #nivelesEducativos .flex-container-oferta .materias-container .card-materia:nth-child(5n + 4) {
+        #nivelesEducativos .flex-container-oferta .materias-container .card-materia:nth-child(5n + 3) {
           background-image: linear-gradient(rgba(243, 204, 84, 0.6), rgba(243, 204, 84, 0.8)); }
-        #nivelesEducativos .flex-container-oferta .materias-container .card-materia:nth-child(5n + 5) {
+        #nivelesEducativos .flex-container-oferta .materias-container .card-materia:nth-child(5n + 4) {
           background-image: linear-gradient(rgba(79, 182, 157, 0.6), rgba(79, 182, 157, 0.8)); }
-        #nivelesEducativos .flex-container-oferta .materias-container .card-materia:nth-child(5n + 6) {
+        #nivelesEducativos .flex-container-oferta .materias-container .card-materia:nth-child(5n + 5) {
           background-image: linear-gradient(rgba(132, 81, 153, 0.6), rgba(132, 81, 153, 0.8)); }
         #nivelesEducativos .flex-container-oferta .materias-container .card-materia:hover, #nivelesEducativos .flex-container-oferta .materias-container .card-materia:active, #nivelesEducativos .flex-container-oferta .materias-container .card-materia:focus {
           height: 70vh;
           min-width: 300px;
           background-image: linear-gradient(rgba(53, 146, 207, 0.6), rgba(53, 146, 207, 0.8)); }
-          #nivelesEducativos .flex-container-oferta .materias-container .card-materia:hover:nth-child(5n + 3), #nivelesEducativos .flex-container-oferta .materias-container .card-materia:active:nth-child(5n + 3), #nivelesEducativos .flex-container-oferta .materias-container .card-materia:focus:nth-child(5n + 3) {
+          #nivelesEducativos .flex-container-oferta .materias-container .card-materia:hover:nth-child(5n + 2), #nivelesEducativos .flex-container-oferta .materias-container .card-materia:active:nth-child(5n + 2), #nivelesEducativos .flex-container-oferta .materias-container .card-materia:focus:nth-child(5n + 2) {
             background-image: linear-gradient(rgba(232, 59, 101, 0.6), rgba(232, 59, 101, 0.8)); }
-          #nivelesEducativos .flex-container-oferta .materias-container .card-materia:hover:nth-child(5n + 4), #nivelesEducativos .flex-container-oferta .materias-container .card-materia:active:nth-child(5n + 4), #nivelesEducativos .flex-container-oferta .materias-container .card-materia:focus:nth-child(5n + 4) {
+          #nivelesEducativos .flex-container-oferta .materias-container .card-materia:hover:nth-child(5n + 3), #nivelesEducativos .flex-container-oferta .materias-container .card-materia:active:nth-child(5n + 3), #nivelesEducativos .flex-container-oferta .materias-container .card-materia:focus:nth-child(5n + 3) {
             background-image: linear-gradient(rgba(243, 204, 84, 0.6), rgba(243, 204, 84, 0.8)); }
-          #nivelesEducativos .flex-container-oferta .materias-container .card-materia:hover:nth-child(5n + 5), #nivelesEducativos .flex-container-oferta .materias-container .card-materia:active:nth-child(5n + 5), #nivelesEducativos .flex-container-oferta .materias-container .card-materia:focus:nth-child(5n + 5) {
+          #nivelesEducativos .flex-container-oferta .materias-container .card-materia:hover:nth-child(5n + 4), #nivelesEducativos .flex-container-oferta .materias-container .card-materia:active:nth-child(5n + 4), #nivelesEducativos .flex-container-oferta .materias-container .card-materia:focus:nth-child(5n + 4) {
             background-image: linear-gradient(rgba(79, 182, 157, 0.6), rgba(79, 182, 157, 0.8)); }
-          #nivelesEducativos .flex-container-oferta .materias-container .card-materia:hover:nth-child(5n + 6), #nivelesEducativos .flex-container-oferta .materias-container .card-materia:active:nth-child(5n + 6), #nivelesEducativos .flex-container-oferta .materias-container .card-materia:focus:nth-child(5n + 6) {
+          #nivelesEducativos .flex-container-oferta .materias-container .card-materia:hover:nth-child(5n + 5), #nivelesEducativos .flex-container-oferta .materias-container .card-materia:active:nth-child(5n + 5), #nivelesEducativos .flex-container-oferta .materias-container .card-materia:focus:nth-child(5n + 5) {
             background-image: linear-gradient(rgba(132, 81, 153, 0.6), rgba(132, 81, 153, 0.8)); }
           #nivelesEducativos .flex-container-oferta .materias-container .card-materia:hover h2, #nivelesEducativos .flex-container-oferta .materias-container .card-materia:active h2, #nivelesEducativos .flex-container-oferta .materias-container .card-materia:focus h2 {
-            font-size: 41px; }
+            font-size: 32px; }
+    @media only screen and (max-width: 640px) {
+      #nivelesEducativos .flex-container-oferta .materias-container .moveArrows {
+        display: none; } }
     @media only screen and (max-width: 479px) {
       #nivelesEducativos .flex-container-oferta .header-oferta {
         width: 90%; }
@@ -505,9 +500,7 @@
         #nivelesEducativos .flex-container-oferta .header-oferta .oferta-h3 {
           font-size: 16px; }
         #nivelesEducativos .flex-container-oferta .header-oferta .oferta-p {
-          font-size: 13px; }
-      #nivelesEducativos .flex-container-oferta .materias-container .moveArrows {
-        display: none; } }
+          font-size: 13px; } }
 
 /*------------Online-------------*/
 .flex-container-online {
