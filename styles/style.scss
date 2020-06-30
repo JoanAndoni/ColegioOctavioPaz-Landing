@@ -1,8 +1,8 @@
 $text-size-title: 65.5px;
-$text-size-h1: 41px;
-$text-size-h2: 25.6px;
-$text-size-p: 16px;
-$text-size-min: 13px;
+$text-size-h1: 46px;
+$text-size-h2: 28.8px;
+$text-size-p: 18px;
+$text-size-min: 14px;
 $color-yellow: #f1c40f;
 $color-darkgrey: rgb(25, 25, 25);
 $margin-title: 18px;
@@ -230,7 +230,7 @@ $margin-subtitle: 11.25px;
 }
 
 /* Mobile and iPad Portrait */
-@media only screen and (max-width: 810px) {
+@media only screen and (max-width: 890px) {
     #main-navbar {
         display: none;
     }
@@ -597,6 +597,9 @@ $margin-subtitle: 11.25px;
 
         @media only screen and (max-width: 640px) {
             .materias-container {
+                .cards {
+                    width: 95%;
+                }
                 .moveArrows {
                     display: none;
                 }
@@ -799,11 +802,6 @@ $margin-subtitle: 11.25px;
                             font-size: 100px;
                         }
                     }
-                    .right {
-                        p {
-                            font-size: $text-size-min;
-                        }
-                    }
                 }
             }
         }
@@ -857,6 +855,16 @@ $margin-subtitle: 11.25px;
                 height: 120px;
                 margin-top: 15px;
                 margin-bottom: 5px;
+            }
+
+            @media only screen and (max-width: 479px) {
+                h2  {
+                    font-size: $text-size-p;
+                }
+
+                p {
+                    font-size: $text-size-min;
+                }
             }
         }
 
