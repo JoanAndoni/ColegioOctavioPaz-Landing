@@ -1,17 +1,19 @@
 // FUNCION PARA SACAR EL MENU RESPOSIVO CON BOTON
 function responsiveNavbarFunction() {
-  if (document.getElementById("navbarBox").style.opacity === "1") {
+  var navbarBox = document.getElementById("navbarBox"),
+    navbar = document.getElementById("responsiveBar");
+  if (navbarBox.style.opacity === "1") {
     // console.log('Close Box');
-    document.getElementById("navbarBox").style.opacity = "0";
-    document.getElementById("navbarBox").style.visibility = "hidden";
-    document.getElementById("responsiveBar").style.visibility = "visible";
-    document.getElementById("responsiveBar").style.opacity = "1";
+    navbarBox.style.opacity = "0";
+    navbarBox.style.visibility = "hidden";
+    navbar.style.visibility = "visible";
+    navbar.style.opacity = "1";
   } else {
     // console.log('Open Box');
-    document.getElementById("navbarBox").style.visibility = "visible";
-    document.getElementById("navbarBox").style.opacity = "1";
-    document.getElementById("responsiveBar").style.opacity = "0";
-    document.getElementById("responsiveBar").style.visibility = "hidden";
+    navbarBox.style.visibility = "visible";
+    navbarBox.style.opacity = "1";
+    navbar.style.opacity = "0";
+    navbar.style.visibility = "hidden";
   }
 }
 

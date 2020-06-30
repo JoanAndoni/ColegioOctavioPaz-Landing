@@ -121,7 +121,7 @@
   height: auto;
   padding: 10px 20px;
   position: fixed;
-  z-index: 100;
+  z-index: 5;
   background: transparent;
   transition: all 1.2s ease-out;
   background: rgba(0, 0, 0, 0.1); }
@@ -294,7 +294,7 @@
         color: white; }
       .flex-container-nosotros .flex-container-nosotros-card.left:hover, .flex-container-nosotros .flex-container-nosotros-card.left:active, .flex-container-nosotros .flex-container-nosotros-card.left:focus {
         clip-path: polygon(0% 0%, 90% 0%, 90% 100%, 0% 100%);
-        z-index: 2;
+        z-index: 1;
         background-color: black; }
         .flex-container-nosotros .flex-container-nosotros-card.left:hover .text-nosotros, .flex-container-nosotros .flex-container-nosotros-card.left:active .text-nosotros, .flex-container-nosotros .flex-container-nosotros-card.left:focus .text-nosotros {
           display: initial; }
@@ -309,7 +309,7 @@
         color: black; }
       .flex-container-nosotros .flex-container-nosotros-card.right:hover, .flex-container-nosotros .flex-container-nosotros-card.right:active, .flex-container-nosotros .flex-container-nosotros-card.right:focus {
         clip-path: polygon(10% 0%, 100% 0%, 100% 100%, 10% 100%);
-        z-index: 2;
+        z-index: 1;
         background-color: white; }
         .flex-container-nosotros .flex-container-nosotros-card.right:hover .text-nosotros, .flex-container-nosotros .flex-container-nosotros-card.right:active .text-nosotros, .flex-container-nosotros .flex-container-nosotros-card.right:focus .text-nosotros {
           display: initial; }
@@ -503,6 +503,69 @@
           font-size: 18px; }
         #nivelesEducativos .flex-container-oferta .header-oferta .oferta-p {
           font-size: 14px; } }
+
+#popup {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  z-index: 5;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  visibility: hidden;
+  background: rgba(0, 0, 0, 0.95);
+  transition: all 0.3s ease-out; }
+  #popup #menu-bottom {
+    position: fixed;
+    top: 1%;
+    right: 1%; }
+    #popup #menu-bottom .flex-img-burguer {
+      height: 50px; }
+  #popup #info-materia {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 75%; }
+    #popup #info-materia #imagen-materia {
+      height: 50vh;
+      width: auto;
+      margin: 11.25px 0; }
+    #popup #info-materia #title-materia {
+      margin: 11.25px 0;
+      font-family: "Raleway";
+      font-weight: 900;
+      text-align: center;
+      font-size: 46px;
+      color: #f1c40f; }
+    #popup #info-materia #text-materia {
+      margin: 11.25px 0;
+      font-family: "Raleway";
+      font-weight: 400;
+      font-size: 18px;
+      text-align: justify;
+      color: #fff; }
+  @media only screen and (max-width: 640px) {
+    #popup #info-materia {
+      width: 90%; }
+      #popup #info-materia #imagen-materia {
+        height: auto;
+        width: 100%;
+        margin: 11.25px 0; } }
 
 /*------------Online-------------*/
 .flex-container-online {
