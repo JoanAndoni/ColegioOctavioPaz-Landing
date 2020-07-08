@@ -4,31 +4,26 @@
   src: url(../assets/fonts/Raleway-Light.ttf);
   font-style: normal;
   font-weight: 200; }
-
 @font-face {
   font-family: "Raleway";
   src: url(../assets/fonts/Raleway-Regular.ttf);
   font-style: normal;
   font-weight: 400; }
-
 @font-face {
   font-family: "Raleway";
   src: url(../assets/fonts/Raleway-Medium.ttf);
   font-style: normal;
   font-weight: 600; }
-
 @font-face {
   font-family: "Raleway";
   src: url(../assets/fonts/Raleway-SemiBold.ttf);
   font-style: normal;
   font-weight: 700; }
-
 @font-face {
   font-family: "Raleway";
   src: url(../assets/fonts/Raleway-Bold.ttf);
   font-style: normal;
   font-weight: 900; }
-
 ::-webkit-scrollbar {
   display: none; }
 
@@ -176,9 +171,9 @@
 @media only screen and (max-width: 890px) {
   #main-navbar {
     display: none; }
+
   #responsive-navbar {
     display: flex; } }
-
 /*------------HEADER-------------*/
 .header {
   display: -webkit-box;
@@ -515,6 +510,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  flex-wrap: nowrap;
   position: fixed;
   height: 100vh;
   width: 100vw;
@@ -542,6 +538,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    flex-wrap: nowrap;
     width: 75%;
     height: auto; }
     #popup #info-materia #imagen-materia {
@@ -567,14 +564,18 @@
   @media only screen and (max-width: 900px) {
     #popup {
       justify-content: start;
-      overflow-x: scroll; }
+      overflow-y: scroll !important; }
       #popup #info-materia {
         width: 90%;
-        margin: 55px 0 20px 0; }
+        margin: 40px 0 20px 0; }
         #popup #info-materia #imagen-materia {
           height: auto;
           width: 75%;
-          margin: 0; } }
+          margin: 0; }
+        #popup #info-materia #title-materia {
+          font-size: 29px; }
+        #popup #info-materia #text-materia {
+          font-size: 14px; } }
   @media only screen and (max-width: 479px) {
     #popup #info-materia #imagen-materia {
       width: 100%; } }
@@ -944,3 +945,5 @@
         transition: all 0.3s ease; }
         .flex-container-footer .box-copyright span a:hover {
           color: #f1c40f; }
+
+/*# sourceMappingURL=style.css.map */
